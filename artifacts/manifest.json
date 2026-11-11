@@ -1,0 +1,27 @@
+{
+  "repository": "https://github.com/plurimath/amath",
+  "commit": "3cbf3f8d0c789dff0542ad8b412d088659423d06",
+  "files": {
+    "artifacts/asciimath.json": "f7e812476e125729e4f69c00d08083d69e83b4666d3c33b911e3ab88d30988da",
+    "artifacts/asciimath.bindings.ts.json": "1865cd1507bc519987b65eaba4b54b934fcfea3856555a3c6a646b0f07ceb62f",
+    "artifacts/asciimath.checksums.txt": "867e257a85b013f355b3201667402902f97a93bf20c6c76bece9c6c1c0cee28c",
+    "grammars/asciimath.parg": "8fc391577745dec67f31913a54de1060c6856f5514ed3c11300724a462ae8cfb",
+    "grammars/asciimath.wrappers.json": "ef2919bef0d3581eb5bfe93dfc268cf85961fb69794b6730f792b14c0a0b6618",
+    "model/asciimath.lml.json": "da333f8d082478299474767c5648e7a2b2a68a3bd86eeacd6cc087e782ea2e19",
+    "data/asciimath-symbols.json": "828202076ad10a1763499c84b3dba68083834cc91298538a49c7a006ae39d9c5"
+  },
+  "parsanol": {
+    "package": "parsanol",
+    "version": "0.10.44",
+    "source_commit": "42aeb8fb4773b7e11d0e52bdf5c7e4b34bf5efa4",
+    "repository": "https://github.com/suleman-uzair/parsanol-ts",
+    "status": "public Git candidate, PR61; not an npm release",
+    "engine_source_commit": "4b8351aae8e403e73aaa306111250ebd56c12e0f",
+    "diagnostics": "strict primary shape; Parslet causal refusal; strict deepest fallback"
+  },
+  "model_codegen": {
+    "repository": "https://github.com/lutaml/lutaml-ts",
+    "commit": "1242c7b6314dcadc42e3453e85c9f2fc879cd7ef",
+    "status": "private candidate; generated output consumed, not a published dependency"
+  }
+}
