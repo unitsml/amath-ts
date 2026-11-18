@@ -1,0 +1,2274 @@
+{
+  "format": "amath-lml/1",
+  "models": [
+    {
+      "lml": 1,
+      "model": "Amath::Model::AmathChainItem",
+      "attributes": [
+        {
+          "name": "amath_end",
+          "type": "Amath::Model::AmathEnd"
+        },
+        {
+          "name": "amath_lr",
+          "type": "Amath::Model::AmathLr"
+        },
+        {
+          "name": "amath_step",
+          "type": "Amath::Model::AmathStep"
+        }
+      ],
+      "mappings": {}
+    },
+    {
+      "lml": 1,
+      "model": "Amath::Model::AmathEnd",
+      "attributes": [
+        {
+          "name": "comma",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "empty",
+          "type": "string"
+        },
+        {
+          "name": "expr",
+          "type": "Amath::Model::Expr"
+        },
+        {
+          "name": "left_right",
+          "type": "Amath::Model::LeftRight"
+        },
+        {
+          "name": "rparen",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "table",
+          "type": "Amath::Model::Table"
+        }
+      ],
+      "mappings": {}
+    },
+    {
+      "lml": 1,
+      "model": "Amath::Model::AmathLr",
+      "attributes": [
+        {
+          "name": "base",
+          "type": "Amath::Model::Base"
+        },
+        {
+          "name": "base_value",
+          "type": "Amath::Model::BaseValue"
+        },
+        {
+          "name": "frac",
+          "type": "Amath::Model::Frac"
+        },
+        {
+          "name": "power",
+          "type": "Amath::Model::Power"
+        },
+        {
+          "name": "power_value",
+          "type": "Amath::Model::PowerValue"
+        },
+        {
+          "name": "table",
+          "type": "Amath::Model::Table"
+        }
+      ],
+      "mappings": {}
+    },
+    {
+      "lml": 1,
+      "model": "Amath::Model::AmathStep",
+      "attributes": [
+        {
+          "name": "base",
+          "type": "Amath::Model::Base"
+        },
+        {
+          "name": "base_value",
+          "type": "Amath::Model::BaseValue"
+        },
+        {
+          "name": "color",
+          "type": "Amath::Model::Color"
+        },
+        {
+          "name": "color_value",
+          "type": "Amath::Model::ColorValue"
+        },
+        {
+          "name": "comma",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "empty",
+          "type": "string"
+        },
+        {
+          "name": "frac",
+          "type": "Amath::Model::Frac"
+        },
+        {
+          "name": "left",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "literal",
+          "type": "string"
+        },
+        {
+          "name": "literal_2",
+          "type": "string"
+        },
+        {
+          "name": "mod",
+          "type": "Amath::Model::Mod"
+        },
+        {
+          "name": "power",
+          "type": "Amath::Model::Power"
+        },
+        {
+          "name": "power_base",
+          "type": "Amath::Model::PowerBase"
+        },
+        {
+          "name": "power_value",
+          "type": "Amath::Model::PowerValue"
+        },
+        {
+          "name": "right",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "sequence",
+          "type": "Amath::Model::Sequence"
+        },
+        {
+          "name": "symbol",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "table",
+          "type": "Amath::Model::Table"
+        },
+        {
+          "name": "ternary",
+          "type": "Amath::Model::Ternary"
+        },
+        {
+          "name": "ternary_class",
+          "type": "string"
+        }
+      ],
+      "mappings": {}
+    },
+    {
+      "lml": 1,
+      "model": "Amath::Model::Base",
+      "attributes": [
+        {
+          "name": "base_value",
+          "type": "Amath::Model::BaseValue"
+        }
+      ],
+      "mappings": {}
+    },
+    {
+      "lml": 1,
+      "model": "Amath::Model::BaseValue",
+      "attributes": [
+        {
+          "name": "binary_class",
+          "type": "string"
+        },
+        {
+          "name": "binary_number",
+          "type": "string"
+        },
+        {
+          "name": "bold_fonts",
+          "type": "string"
+        },
+        {
+          "name": "comma_separated",
+          "type": "Amath::Model::CommaSeparatedItem",
+          "collection": {
+            "min": 0
+          }
+        },
+        {
+          "name": "fonts_class",
+          "type": "string"
+        },
+        {
+          "name": "fonts_value",
+          "type": "Amath::Model::FontsValue"
+        },
+        {
+          "name": "hex_number",
+          "type": "string"
+        },
+        {
+          "name": "intermediate_exp",
+          "type": "Amath::Model::IntermediateExp"
+        },
+        {
+          "name": "number",
+          "type": "string"
+        },
+        {
+          "name": "octal_number",
+          "type": "string"
+        },
+        {
+          "name": "slash",
+          "type": "string"
+        },
+        {
+          "name": "symbol",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "ternary_class",
+          "type": "string"
+        },
+        {
+          "name": "text",
+          "type": "Amath::Model::Text"
+        },
+        {
+          "name": "unary",
+          "type": "Amath::Model::Unary"
+        },
+        {
+          "name": "uncertainty",
+          "type": "Amath::Model::Uncertainty"
+        },
+        {
+          "name": "unitsml",
+          "type": "Amath::Model::Unitsml"
+        }
+      ],
+      "mappings": {}
+    },
+    {
+      "lml": 1,
+      "model": "Amath::Model::Color",
+      "attributes": [
+        {
+          "name": "base",
+          "type": "Amath::Model::Base"
+        },
+        {
+          "name": "base_value",
+          "type": "Amath::Model::BaseValue"
+        },
+        {
+          "name": "color",
+          "type": "Amath::Model::Color"
+        },
+        {
+          "name": "color_value",
+          "type": "Amath::Model::ColorValue"
+        },
+        {
+          "name": "comma",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "frac",
+          "type": "Amath::Model::Frac"
+        },
+        {
+          "name": "intermediate_exp",
+          "type": "Amath::Model::IntermediateExp"
+        },
+        {
+          "name": "left",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "literal",
+          "type": "string"
+        },
+        {
+          "name": "mod",
+          "type": "Amath::Model::Mod"
+        },
+        {
+          "name": "power",
+          "type": "Amath::Model::Power"
+        },
+        {
+          "name": "power_base",
+          "type": "Amath::Model::PowerBase"
+        },
+        {
+          "name": "power_value",
+          "type": "Amath::Model::PowerValue"
+        },
+        {
+          "name": "right",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "sequence",
+          "type": "Amath::Model::Sequence"
+        },
+        {
+          "name": "symbol",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "table",
+          "type": "Amath::Model::Table"
+        },
+        {
+          "name": "ternary",
+          "type": "Amath::Model::Ternary"
+        },
+        {
+          "name": "ternary_class",
+          "type": "string"
+        }
+      ],
+      "mappings": {}
+    },
+    {
+      "lml": 1,
+      "model": "Amath::Model::ColorValue",
+      "attributes": [
+        {
+          "name": "binary_class",
+          "type": "string"
+        },
+        {
+          "name": "binary_number",
+          "type": "string"
+        },
+        {
+          "name": "bold_fonts",
+          "type": "string"
+        },
+        {
+          "name": "comma_separated",
+          "type": "Amath::Model::CommaSeparatedItem",
+          "collection": {
+            "min": 0
+          }
+        },
+        {
+          "name": "fonts_class",
+          "type": "string"
+        },
+        {
+          "name": "fonts_value",
+          "type": "Amath::Model::FontsValue"
+        },
+        {
+          "name": "hex_number",
+          "type": "string"
+        },
+        {
+          "name": "intermediate_exp",
+          "type": "Amath::Model::IntermediateExp"
+        },
+        {
+          "name": "number",
+          "type": "string"
+        },
+        {
+          "name": "octal_number",
+          "type": "string"
+        },
+        {
+          "name": "slash",
+          "type": "string"
+        },
+        {
+          "name": "symbol",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "ternary_class",
+          "type": "string"
+        },
+        {
+          "name": "text",
+          "type": "Amath::Model::Text"
+        },
+        {
+          "name": "unary",
+          "type": "Amath::Model::Unary"
+        },
+        {
+          "name": "uncertainty",
+          "type": "Amath::Model::Uncertainty"
+        },
+        {
+          "name": "unitsml",
+          "type": "Amath::Model::Unitsml"
+        }
+      ],
+      "mappings": {}
+    },
+    {
+      "lml": 1,
+      "model": "Amath::Model::CommaSeparatedItem",
+      "attributes": [
+        {
+          "name": "comma",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "number",
+          "type": "string"
+        }
+      ],
+      "mappings": {}
+    },
+    {
+      "lml": 1,
+      "model": "Amath::Model::Denominator",
+      "attributes": [
+        {
+          "name": "base",
+          "type": "Amath::Model::Base"
+        },
+        {
+          "name": "base_value",
+          "type": "Amath::Model::BaseValue"
+        },
+        {
+          "name": "color",
+          "type": "Amath::Model::Color"
+        },
+        {
+          "name": "color_value",
+          "type": "Amath::Model::ColorValue"
+        },
+        {
+          "name": "comma",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "frac",
+          "type": "Amath::Model::Frac"
+        },
+        {
+          "name": "left",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "literal",
+          "type": "string"
+        },
+        {
+          "name": "mod",
+          "type": "Amath::Model::Mod"
+        },
+        {
+          "name": "power",
+          "type": "Amath::Model::Power"
+        },
+        {
+          "name": "power_base",
+          "type": "Amath::Model::PowerBase"
+        },
+        {
+          "name": "power_value",
+          "type": "Amath::Model::PowerValue"
+        },
+        {
+          "name": "right",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "sequence",
+          "type": "Amath::Model::Sequence"
+        },
+        {
+          "name": "symbol",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "table",
+          "type": "Amath::Model::Table"
+        },
+        {
+          "name": "ternary",
+          "type": "Amath::Model::Ternary"
+        },
+        {
+          "name": "ternary_class",
+          "type": "string"
+        }
+      ],
+      "mappings": {}
+    },
+    {
+      "lml": 1,
+      "model": "Amath::Model::Diff",
+      "attributes": [
+        {
+          "name": "uncertainty",
+          "type": "Amath::Model::Uncertainty"
+        }
+      ],
+      "mappings": {}
+    },
+    {
+      "lml": 1,
+      "model": "Amath::Model::Dividend",
+      "attributes": [
+        {
+          "name": "base",
+          "type": "Amath::Model::Base"
+        },
+        {
+          "name": "base_value",
+          "type": "Amath::Model::BaseValue"
+        },
+        {
+          "name": "binary_class",
+          "type": "string"
+        },
+        {
+          "name": "binary_number",
+          "type": "string"
+        },
+        {
+          "name": "bold_fonts",
+          "type": "string"
+        },
+        {
+          "name": "comma_separated",
+          "type": "Amath::Model::CommaSeparatedItem",
+          "collection": {
+            "min": 0
+          }
+        },
+        {
+          "name": "fonts_class",
+          "type": "string"
+        },
+        {
+          "name": "fonts_value",
+          "type": "Amath::Model::FontsValue"
+        },
+        {
+          "name": "hex_number",
+          "type": "string"
+        },
+        {
+          "name": "intermediate_exp",
+          "type": "Amath::Model::IntermediateExp"
+        },
+        {
+          "name": "number",
+          "type": "string"
+        },
+        {
+          "name": "octal_number",
+          "type": "string"
+        },
+        {
+          "name": "power",
+          "type": "Amath::Model::Power"
+        },
+        {
+          "name": "power_base",
+          "type": "Amath::Model::PowerBase"
+        },
+        {
+          "name": "power_value",
+          "type": "Amath::Model::PowerValue"
+        },
+        {
+          "name": "slash",
+          "type": "string"
+        },
+        {
+          "name": "symbol",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "ternary_class",
+          "type": "string"
+        },
+        {
+          "name": "text",
+          "type": "Amath::Model::Text"
+        },
+        {
+          "name": "unary",
+          "type": "Amath::Model::Unary"
+        },
+        {
+          "name": "uncertainty",
+          "type": "Amath::Model::Uncertainty"
+        },
+        {
+          "name": "unitsml",
+          "type": "Amath::Model::Unitsml"
+        }
+      ],
+      "mappings": {}
+    },
+    {
+      "lml": 1,
+      "model": "Amath::Model::Divisor",
+      "attributes": [
+        {
+          "name": "base",
+          "type": "Amath::Model::Base"
+        },
+        {
+          "name": "base_value",
+          "type": "Amath::Model::BaseValue"
+        },
+        {
+          "name": "color",
+          "type": "Amath::Model::Color"
+        },
+        {
+          "name": "color_value",
+          "type": "Amath::Model::ColorValue"
+        },
+        {
+          "name": "comma",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "frac",
+          "type": "Amath::Model::Frac"
+        },
+        {
+          "name": "left",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "literal",
+          "type": "string"
+        },
+        {
+          "name": "mod",
+          "type": "Amath::Model::Mod"
+        },
+        {
+          "name": "negative_mod_operand",
+          "type": "Amath::Model::NegativeModOperand"
+        },
+        {
+          "name": "power",
+          "type": "Amath::Model::Power"
+        },
+        {
+          "name": "power_base",
+          "type": "Amath::Model::PowerBase"
+        },
+        {
+          "name": "power_value",
+          "type": "Amath::Model::PowerValue"
+        },
+        {
+          "name": "right",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "sequence",
+          "type": "Amath::Model::Sequence"
+        },
+        {
+          "name": "symbol",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "table",
+          "type": "Amath::Model::Table"
+        },
+        {
+          "name": "ternary",
+          "type": "Amath::Model::Ternary"
+        },
+        {
+          "name": "ternary_class",
+          "type": "string"
+        }
+      ],
+      "mappings": {}
+    },
+    {
+      "lml": 1,
+      "model": "Amath::Model::Document",
+      "attributes": [
+        {
+          "name": "expression",
+          "type": "Amath::Model::Expression"
+        },
+        {
+          "name": "decimal",
+          "type": "string"
+        }
+      ],
+      "mappings": {}
+    },
+    {
+      "lml": 1,
+      "model": "Amath::Model::Expr",
+      "attributes": [
+        {
+          "name": "amath_chain",
+          "type": "Amath::Model::AmathChainItem",
+          "collection": {
+            "min": 0
+          }
+        },
+        {
+          "name": "base",
+          "type": "Amath::Model::Base"
+        },
+        {
+          "name": "base_value",
+          "type": "Amath::Model::BaseValue"
+        },
+        {
+          "name": "color",
+          "type": "Amath::Model::Color"
+        },
+        {
+          "name": "color_value",
+          "type": "Amath::Model::ColorValue"
+        },
+        {
+          "name": "comma",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "empty",
+          "type": "string"
+        },
+        {
+          "name": "expr",
+          "type": "Amath::Model::Expr"
+        },
+        {
+          "name": "frac",
+          "type": "Amath::Model::Frac"
+        },
+        {
+          "name": "left",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "left_right",
+          "type": "Amath::Model::LeftRight"
+        },
+        {
+          "name": "list",
+          "type": "Amath::Model::ListItem",
+          "collection": {
+            "min": 0
+          }
+        },
+        {
+          "name": "literal",
+          "type": "string"
+        },
+        {
+          "name": "literal_2",
+          "type": "string"
+        },
+        {
+          "name": "mod",
+          "type": "Amath::Model::Mod"
+        },
+        {
+          "name": "power",
+          "type": "Amath::Model::Power"
+        },
+        {
+          "name": "power_base",
+          "type": "Amath::Model::PowerBase"
+        },
+        {
+          "name": "power_value",
+          "type": "Amath::Model::PowerValue"
+        },
+        {
+          "name": "right",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "rparen",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "sequence",
+          "type": "Amath::Model::Sequence"
+        },
+        {
+          "name": "symbol",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "table",
+          "type": "Amath::Model::Table"
+        },
+        {
+          "name": "table_row",
+          "type": "Amath::Model::TableRow"
+        },
+        {
+          "name": "ternary",
+          "type": "Amath::Model::Ternary"
+        },
+        {
+          "name": "ternary_class",
+          "type": "string"
+        }
+      ],
+      "mappings": {}
+    },
+    {
+      "lml": 1,
+      "model": "Amath::Model::Expression",
+      "attributes": [
+        {
+          "name": "comma",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "empty",
+          "type": "string"
+        },
+        {
+          "name": "expr",
+          "type": "Amath::Model::Expr"
+        },
+        {
+          "name": "left_right",
+          "type": "Amath::Model::LeftRight"
+        },
+        {
+          "name": "rparen",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "table",
+          "type": "Amath::Model::Table"
+        }
+      ],
+      "mappings": {}
+    },
+    {
+      "lml": 1,
+      "model": "Amath::Model::FontsValue",
+      "attributes": [
+        {
+          "name": "binary_class",
+          "type": "string"
+        },
+        {
+          "name": "binary_number",
+          "type": "string"
+        },
+        {
+          "name": "bold_fonts",
+          "type": "string"
+        },
+        {
+          "name": "comma_separated",
+          "type": "Amath::Model::CommaSeparatedItem",
+          "collection": {
+            "min": 0
+          }
+        },
+        {
+          "name": "fonts_class",
+          "type": "string"
+        },
+        {
+          "name": "fonts_value",
+          "type": "Amath::Model::FontsValue"
+        },
+        {
+          "name": "hex_number",
+          "type": "string"
+        },
+        {
+          "name": "intermediate_exp",
+          "type": "Amath::Model::IntermediateExp"
+        },
+        {
+          "name": "number",
+          "type": "string"
+        },
+        {
+          "name": "octal_number",
+          "type": "string"
+        },
+        {
+          "name": "slash",
+          "type": "string"
+        },
+        {
+          "name": "symbol",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "ternary_class",
+          "type": "string"
+        },
+        {
+          "name": "text",
+          "type": "Amath::Model::Text"
+        },
+        {
+          "name": "unary",
+          "type": "Amath::Model::Unary"
+        },
+        {
+          "name": "uncertainty",
+          "type": "Amath::Model::Uncertainty"
+        },
+        {
+          "name": "unitsml",
+          "type": "Amath::Model::Unitsml"
+        }
+      ],
+      "mappings": {}
+    },
+    {
+      "lml": 1,
+      "model": "Amath::Model::Frac",
+      "attributes": [
+        {
+          "name": "denominator",
+          "type": "Amath::Model::Denominator"
+        },
+        {
+          "name": "numerator",
+          "type": "Amath::Model::Numerator"
+        }
+      ],
+      "mappings": {}
+    },
+    {
+      "lml": 1,
+      "model": "Amath::Model::IntermediateExp",
+      "attributes": [
+        {
+          "name": "d",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "expr",
+          "type": "Amath::Model::Expr"
+        },
+        {
+          "name": "lparen",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "rgb_color",
+          "type": "Amath::Model::RgbColor"
+        },
+        {
+          "name": "rparen",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "text",
+          "type": "Amath::Model::Text"
+        },
+        {
+          "name": "x",
+          "type": "Amath::Model::MathSymbol"
+        }
+      ],
+      "mappings": {}
+    },
+    {
+      "lml": 1,
+      "model": "Amath::Model::LeftRight",
+      "attributes": [
+        {
+          "name": "amath_chain",
+          "type": "Amath::Model::AmathChainItem",
+          "collection": {
+            "min": 0
+          }
+        },
+        {
+          "name": "base",
+          "type": "Amath::Model::Base"
+        },
+        {
+          "name": "base_value",
+          "type": "Amath::Model::BaseValue"
+        },
+        {
+          "name": "comma",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "empty",
+          "type": "string"
+        },
+        {
+          "name": "expr",
+          "type": "Amath::Model::Expr"
+        },
+        {
+          "name": "frac",
+          "type": "Amath::Model::Frac"
+        },
+        {
+          "name": "left",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "left_right",
+          "type": "Amath::Model::LeftRight"
+        },
+        {
+          "name": "left_right_value",
+          "type": "Amath::Model::LeftRightValue"
+        },
+        {
+          "name": "power",
+          "type": "Amath::Model::Power"
+        },
+        {
+          "name": "power_value",
+          "type": "Amath::Model::PowerValue"
+        },
+        {
+          "name": "right",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "rparen",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "table",
+          "type": "Amath::Model::Table"
+        }
+      ],
+      "mappings": {}
+    },
+    {
+      "lml": 1,
+      "model": "Amath::Model::LeftRightValue",
+      "attributes": [
+        {
+          "name": "base",
+          "type": "Amath::Model::Base"
+        },
+        {
+          "name": "base_value",
+          "type": "Amath::Model::BaseValue"
+        },
+        {
+          "name": "binary_class",
+          "type": "string"
+        },
+        {
+          "name": "binary_number",
+          "type": "string"
+        },
+        {
+          "name": "bold_fonts",
+          "type": "string"
+        },
+        {
+          "name": "color",
+          "type": "Amath::Model::Color"
+        },
+        {
+          "name": "color_value",
+          "type": "Amath::Model::ColorValue"
+        },
+        {
+          "name": "comma",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "comma_separated",
+          "type": "Amath::Model::CommaSeparatedItem",
+          "collection": {
+            "min": 0
+          }
+        },
+        {
+          "name": "empty",
+          "type": "string"
+        },
+        {
+          "name": "fonts_class",
+          "type": "string"
+        },
+        {
+          "name": "fonts_value",
+          "type": "Amath::Model::FontsValue"
+        },
+        {
+          "name": "frac",
+          "type": "Amath::Model::Frac"
+        },
+        {
+          "name": "hex_number",
+          "type": "string"
+        },
+        {
+          "name": "intermediate_exp",
+          "type": "Amath::Model::IntermediateExp"
+        },
+        {
+          "name": "left",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "literal",
+          "type": "string"
+        },
+        {
+          "name": "mod",
+          "type": "Amath::Model::Mod"
+        },
+        {
+          "name": "number",
+          "type": "string"
+        },
+        {
+          "name": "octal_number",
+          "type": "string"
+        },
+        {
+          "name": "power",
+          "type": "Amath::Model::Power"
+        },
+        {
+          "name": "power_base",
+          "type": "Amath::Model::PowerBase"
+        },
+        {
+          "name": "power_value",
+          "type": "Amath::Model::PowerValue"
+        },
+        {
+          "name": "right",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "sequence",
+          "type": "Amath::Model::Sequence"
+        },
+        {
+          "name": "slash",
+          "type": "string"
+        },
+        {
+          "name": "symbol",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "table",
+          "type": "Amath::Model::Table"
+        },
+        {
+          "name": "ternary",
+          "type": "Amath::Model::Ternary"
+        },
+        {
+          "name": "ternary_class",
+          "type": "string"
+        },
+        {
+          "name": "text",
+          "type": "Amath::Model::Text"
+        },
+        {
+          "name": "unary",
+          "type": "Amath::Model::Unary"
+        },
+        {
+          "name": "uncertainty",
+          "type": "Amath::Model::Uncertainty"
+        },
+        {
+          "name": "unitsml",
+          "type": "Amath::Model::Unitsml"
+        }
+      ],
+      "mappings": {}
+    },
+    {
+      "lml": 1,
+      "model": "Amath::Model::ListItem",
+      "attributes": [
+        {
+          "name": "base",
+          "type": "Amath::Model::Base"
+        },
+        {
+          "name": "base_value",
+          "type": "Amath::Model::BaseValue"
+        },
+        {
+          "name": "comma",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "expr",
+          "type": "Amath::Model::Expr"
+        },
+        {
+          "name": "left_right",
+          "type": "Amath::Model::LeftRight"
+        },
+        {
+          "name": "power",
+          "type": "Amath::Model::Power"
+        },
+        {
+          "name": "power_value",
+          "type": "Amath::Model::PowerValue"
+        },
+        {
+          "name": "rparen",
+          "type": "Amath::Model::MathSymbol"
+        }
+      ],
+      "mappings": {}
+    },
+    {
+      "lml": 1,
+      "model": "Amath::Model::MathSymbol",
+      "attributes": [
+        {
+          "name": "spelling",
+          "type": "string"
+        },
+        {
+          "name": "value",
+          "type": "string"
+        },
+        {
+          "name": "kind",
+          "type": "string"
+        }
+      ],
+      "mappings": {}
+    },
+    {
+      "lml": 1,
+      "model": "Amath::Model::Mod",
+      "attributes": [
+        {
+          "name": "dividend",
+          "type": "Amath::Model::Dividend"
+        },
+        {
+          "name": "divisor",
+          "type": "Amath::Model::Divisor"
+        },
+        {
+          "name": "literal",
+          "type": "string"
+        },
+        {
+          "name": "mod",
+          "type": "Amath::Model::Mod"
+        }
+      ],
+      "mappings": {}
+    },
+    {
+      "lml": 1,
+      "model": "Amath::Model::NegativeModOperand",
+      "attributes": [
+        {
+          "name": "base",
+          "type": "Amath::Model::Base"
+        },
+        {
+          "name": "base_value",
+          "type": "Amath::Model::BaseValue"
+        },
+        {
+          "name": "color",
+          "type": "Amath::Model::Color"
+        },
+        {
+          "name": "color_value",
+          "type": "Amath::Model::ColorValue"
+        },
+        {
+          "name": "comma",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "frac",
+          "type": "Amath::Model::Frac"
+        },
+        {
+          "name": "left",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "literal",
+          "type": "string"
+        },
+        {
+          "name": "literal_2",
+          "type": "string"
+        },
+        {
+          "name": "mod",
+          "type": "Amath::Model::Mod"
+        },
+        {
+          "name": "power",
+          "type": "Amath::Model::Power"
+        },
+        {
+          "name": "power_base",
+          "type": "Amath::Model::PowerBase"
+        },
+        {
+          "name": "power_value",
+          "type": "Amath::Model::PowerValue"
+        },
+        {
+          "name": "right",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "sequence",
+          "type": "Amath::Model::Sequence"
+        },
+        {
+          "name": "symbol",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "table",
+          "type": "Amath::Model::Table"
+        },
+        {
+          "name": "ternary",
+          "type": "Amath::Model::Ternary"
+        },
+        {
+          "name": "ternary_class",
+          "type": "string"
+        }
+      ],
+      "mappings": {}
+    },
+    {
+      "lml": 1,
+      "model": "Amath::Model::Numerator",
+      "attributes": [
+        {
+          "name": "base",
+          "type": "Amath::Model::Base"
+        },
+        {
+          "name": "base_value",
+          "type": "Amath::Model::BaseValue"
+        },
+        {
+          "name": "binary_class",
+          "type": "string"
+        },
+        {
+          "name": "binary_number",
+          "type": "string"
+        },
+        {
+          "name": "bold_fonts",
+          "type": "string"
+        },
+        {
+          "name": "comma_separated",
+          "type": "Amath::Model::CommaSeparatedItem",
+          "collection": {
+            "min": 0
+          }
+        },
+        {
+          "name": "expr",
+          "type": "Amath::Model::Expr"
+        },
+        {
+          "name": "fonts_class",
+          "type": "string"
+        },
+        {
+          "name": "fonts_value",
+          "type": "Amath::Model::FontsValue"
+        },
+        {
+          "name": "hex_number",
+          "type": "string"
+        },
+        {
+          "name": "intermediate_exp",
+          "type": "Amath::Model::IntermediateExp"
+        },
+        {
+          "name": "left",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "norm",
+          "type": "string"
+        },
+        {
+          "name": "number",
+          "type": "string"
+        },
+        {
+          "name": "octal_number",
+          "type": "string"
+        },
+        {
+          "name": "power",
+          "type": "Amath::Model::Power"
+        },
+        {
+          "name": "power_base",
+          "type": "Amath::Model::PowerBase"
+        },
+        {
+          "name": "power_value",
+          "type": "Amath::Model::PowerValue"
+        },
+        {
+          "name": "right",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "slash",
+          "type": "string"
+        },
+        {
+          "name": "symbol",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "table_left",
+          "type": "Amath::Model::TableLeft"
+        },
+        {
+          "name": "table_right",
+          "type": "Amath::Model::TableRight"
+        },
+        {
+          "name": "table_row",
+          "type": "Amath::Model::TableRow"
+        },
+        {
+          "name": "ternary_class",
+          "type": "string"
+        },
+        {
+          "name": "text",
+          "type": "Amath::Model::Text"
+        },
+        {
+          "name": "unary",
+          "type": "Amath::Model::Unary"
+        },
+        {
+          "name": "uncertainty",
+          "type": "Amath::Model::Uncertainty"
+        },
+        {
+          "name": "unitsml",
+          "type": "Amath::Model::Unitsml"
+        }
+      ],
+      "mappings": {}
+    },
+    {
+      "lml": 1,
+      "model": "Amath::Model::PmaDocument",
+      "attributes": [
+        {
+          "name": "term",
+          "type": "Amath::Model::Term"
+        }
+      ],
+      "mappings": {}
+    },
+    {
+      "lml": 1,
+      "model": "Amath::Model::Power",
+      "attributes": [
+        {
+          "name": "power_value",
+          "type": "Amath::Model::PowerValue"
+        }
+      ],
+      "mappings": {}
+    },
+    {
+      "lml": 1,
+      "model": "Amath::Model::PowerBase",
+      "attributes": [
+        {
+          "name": "base",
+          "type": "Amath::Model::Base"
+        },
+        {
+          "name": "base_value",
+          "type": "Amath::Model::BaseValue"
+        },
+        {
+          "name": "binary_class",
+          "type": "string"
+        },
+        {
+          "name": "binary_number",
+          "type": "string"
+        },
+        {
+          "name": "bold_fonts",
+          "type": "string"
+        },
+        {
+          "name": "comma_separated",
+          "type": "Amath::Model::CommaSeparatedItem",
+          "collection": {
+            "min": 0
+          }
+        },
+        {
+          "name": "fonts_class",
+          "type": "string"
+        },
+        {
+          "name": "fonts_value",
+          "type": "Amath::Model::FontsValue"
+        },
+        {
+          "name": "hex_number",
+          "type": "string"
+        },
+        {
+          "name": "intermediate_exp",
+          "type": "Amath::Model::IntermediateExp"
+        },
+        {
+          "name": "number",
+          "type": "string"
+        },
+        {
+          "name": "octal_number",
+          "type": "string"
+        },
+        {
+          "name": "power",
+          "type": "Amath::Model::Power"
+        },
+        {
+          "name": "power_base",
+          "type": "Amath::Model::PowerBase"
+        },
+        {
+          "name": "power_value",
+          "type": "Amath::Model::PowerValue"
+        },
+        {
+          "name": "slash",
+          "type": "string"
+        },
+        {
+          "name": "symbol",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "ternary_class",
+          "type": "string"
+        },
+        {
+          "name": "text",
+          "type": "Amath::Model::Text"
+        },
+        {
+          "name": "unary",
+          "type": "Amath::Model::Unary"
+        },
+        {
+          "name": "unary_class",
+          "type": "string"
+        },
+        {
+          "name": "uncertainty",
+          "type": "Amath::Model::Uncertainty"
+        },
+        {
+          "name": "unitsml",
+          "type": "Amath::Model::Unitsml"
+        }
+      ],
+      "mappings": {}
+    },
+    {
+      "lml": 1,
+      "model": "Amath::Model::PowerValue",
+      "attributes": [
+        {
+          "name": "binary_class",
+          "type": "string"
+        },
+        {
+          "name": "binary_number",
+          "type": "string"
+        },
+        {
+          "name": "bold_fonts",
+          "type": "string"
+        },
+        {
+          "name": "comma_separated",
+          "type": "Amath::Model::CommaSeparatedItem",
+          "collection": {
+            "min": 0
+          }
+        },
+        {
+          "name": "fonts_class",
+          "type": "string"
+        },
+        {
+          "name": "fonts_value",
+          "type": "Amath::Model::FontsValue"
+        },
+        {
+          "name": "hex_number",
+          "type": "string"
+        },
+        {
+          "name": "intermediate_exp",
+          "type": "Amath::Model::IntermediateExp"
+        },
+        {
+          "name": "number",
+          "type": "string"
+        },
+        {
+          "name": "octal_number",
+          "type": "string"
+        },
+        {
+          "name": "slash",
+          "type": "string"
+        },
+        {
+          "name": "symbol",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "ternary_class",
+          "type": "string"
+        },
+        {
+          "name": "text",
+          "type": "Amath::Model::Text"
+        },
+        {
+          "name": "unary",
+          "type": "Amath::Model::Unary"
+        },
+        {
+          "name": "uncertainty",
+          "type": "Amath::Model::Uncertainty"
+        },
+        {
+          "name": "unitsml",
+          "type": "Amath::Model::Unitsml"
+        }
+      ],
+      "mappings": {}
+    },
+    {
+      "lml": 1,
+      "model": "Amath::Model::RgbColor",
+      "attributes": [
+        {
+          "name": "expr",
+          "type": "Amath::Model::Expr"
+        },
+        {
+          "name": "left_right",
+          "type": "Amath::Model::LeftRight"
+        },
+        {
+          "name": "literal",
+          "type": "string"
+        }
+      ],
+      "mappings": {}
+    },
+    {
+      "lml": 1,
+      "model": "Amath::Model::Sequence",
+      "attributes": [
+        {
+          "name": "binary_class",
+          "type": "string"
+        },
+        {
+          "name": "binary_number",
+          "type": "string"
+        },
+        {
+          "name": "bold_fonts",
+          "type": "string"
+        },
+        {
+          "name": "comma_separated",
+          "type": "Amath::Model::CommaSeparatedItem",
+          "collection": {
+            "min": 0
+          }
+        },
+        {
+          "name": "fonts_class",
+          "type": "string"
+        },
+        {
+          "name": "fonts_value",
+          "type": "Amath::Model::FontsValue"
+        },
+        {
+          "name": "hex_number",
+          "type": "string"
+        },
+        {
+          "name": "intermediate_exp",
+          "type": "Amath::Model::IntermediateExp"
+        },
+        {
+          "name": "number",
+          "type": "string"
+        },
+        {
+          "name": "octal_number",
+          "type": "string"
+        },
+        {
+          "name": "slash",
+          "type": "string"
+        },
+        {
+          "name": "symbol",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "ternary_class",
+          "type": "string"
+        },
+        {
+          "name": "text",
+          "type": "Amath::Model::Text"
+        },
+        {
+          "name": "unary",
+          "type": "Amath::Model::Unary"
+        },
+        {
+          "name": "uncertainty",
+          "type": "Amath::Model::Uncertainty"
+        },
+        {
+          "name": "unitsml",
+          "type": "Amath::Model::Unitsml"
+        }
+      ],
+      "mappings": {}
+    },
+    {
+      "lml": 1,
+      "model": "Amath::Model::Table",
+      "attributes": [
+        {
+          "name": "expr",
+          "type": "Amath::Model::Expr"
+        },
+        {
+          "name": "left",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "norm",
+          "type": "string"
+        },
+        {
+          "name": "right",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "table_left",
+          "type": "Amath::Model::TableLeft"
+        },
+        {
+          "name": "table_right",
+          "type": "Amath::Model::TableRight"
+        },
+        {
+          "name": "table_row",
+          "type": "Amath::Model::TableRow"
+        }
+      ],
+      "mappings": {}
+    },
+    {
+      "lml": 1,
+      "model": "Amath::Model::TableLeft",
+      "attributes": [
+        {
+          "name": "spelling",
+          "type": "string"
+        },
+        {
+          "name": "table_left",
+          "type": "Amath::Model::TableLeft"
+        },
+        {
+          "name": "value",
+          "type": "string"
+        },
+        {
+          "name": "kind",
+          "type": "string"
+        }
+      ],
+      "mappings": {}
+    },
+    {
+      "lml": 1,
+      "model": "Amath::Model::TableRight",
+      "attributes": [
+        {
+          "name": "spelling",
+          "type": "string"
+        },
+        {
+          "name": "table_right",
+          "type": "Amath::Model::TableRight"
+        },
+        {
+          "name": "value",
+          "type": "string"
+        },
+        {
+          "name": "kind",
+          "type": "string"
+        }
+      ],
+      "mappings": {}
+    },
+    {
+      "lml": 1,
+      "model": "Amath::Model::TableRow",
+      "attributes": [
+        {
+          "name": "open_tr",
+          "type": "string"
+        },
+        {
+          "name": "tds_list",
+          "type": "Amath::Model::TdsList"
+        }
+      ],
+      "mappings": {}
+    },
+    {
+      "lml": 1,
+      "model": "Amath::Model::Td",
+      "attributes": [
+        {
+          "name": "expr",
+          "type": "Amath::Model::Expr"
+        },
+        {
+          "name": "left_right",
+          "type": "Amath::Model::LeftRight"
+        },
+        {
+          "name": "literal",
+          "type": "string"
+        }
+      ],
+      "mappings": {}
+    },
+    {
+      "lml": 1,
+      "model": "Amath::Model::TdsList",
+      "attributes": [
+        {
+          "name": "td",
+          "type": "Amath::Model::Td"
+        }
+      ],
+      "mappings": {}
+    },
+    {
+      "lml": 1,
+      "model": "Amath::Model::Term",
+      "attributes": [
+        {
+          "name": "diff",
+          "type": "Amath::Model::Diff"
+        },
+        {
+          "name": "uncertainty",
+          "type": "Amath::Model::Uncertainty"
+        },
+        {
+          "name": "unit",
+          "type": "Amath::Model::Unit"
+        }
+      ],
+      "mappings": {}
+    },
+    {
+      "lml": 1,
+      "model": "Amath::Model::Ternary",
+      "attributes": [
+        {
+          "name": "base",
+          "type": "Amath::Model::Base"
+        },
+        {
+          "name": "base_value",
+          "type": "Amath::Model::BaseValue"
+        },
+        {
+          "name": "power",
+          "type": "Amath::Model::Power"
+        },
+        {
+          "name": "power_value",
+          "type": "Amath::Model::PowerValue"
+        },
+        {
+          "name": "ternary_class",
+          "type": "string"
+        },
+        {
+          "name": "third_value",
+          "type": "Amath::Model::ThirdValue"
+        }
+      ],
+      "mappings": {}
+    },
+    {
+      "lml": 1,
+      "model": "Amath::Model::Text",
+      "attributes": [
+        {
+          "name": "empty_list",
+          "type": "string"
+        },
+        {
+          "name": "literal",
+          "type": "string"
+        }
+      ],
+      "mappings": {}
+    },
+    {
+      "lml": 1,
+      "model": "Amath::Model::ThirdValue",
+      "attributes": [
+        {
+          "name": "base",
+          "type": "Amath::Model::Base"
+        },
+        {
+          "name": "base_value",
+          "type": "Amath::Model::BaseValue"
+        },
+        {
+          "name": "color",
+          "type": "Amath::Model::Color"
+        },
+        {
+          "name": "color_value",
+          "type": "Amath::Model::ColorValue"
+        },
+        {
+          "name": "comma",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "frac",
+          "type": "Amath::Model::Frac"
+        },
+        {
+          "name": "left",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "literal",
+          "type": "string"
+        },
+        {
+          "name": "mod",
+          "type": "Amath::Model::Mod"
+        },
+        {
+          "name": "power",
+          "type": "Amath::Model::Power"
+        },
+        {
+          "name": "power_base",
+          "type": "Amath::Model::PowerBase"
+        },
+        {
+          "name": "power_value",
+          "type": "Amath::Model::PowerValue"
+        },
+        {
+          "name": "right",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "sequence",
+          "type": "Amath::Model::Sequence"
+        },
+        {
+          "name": "symbol",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "table",
+          "type": "Amath::Model::Table"
+        },
+        {
+          "name": "ternary",
+          "type": "Amath::Model::Ternary"
+        },
+        {
+          "name": "ternary_class",
+          "type": "string"
+        }
+      ],
+      "mappings": {}
+    },
+    {
+      "lml": 1,
+      "model": "Amath::Model::Unary",
+      "attributes": [
+        {
+          "name": "base",
+          "type": "Amath::Model::Base"
+        },
+        {
+          "name": "base_value",
+          "type": "Amath::Model::BaseValue"
+        },
+        {
+          "name": "binary_class",
+          "type": "string"
+        },
+        {
+          "name": "binary_number",
+          "type": "string"
+        },
+        {
+          "name": "bold_fonts",
+          "type": "string"
+        },
+        {
+          "name": "comma_separated",
+          "type": "Amath::Model::CommaSeparatedItem",
+          "collection": {
+            "min": 0
+          }
+        },
+        {
+          "name": "fonts_class",
+          "type": "string"
+        },
+        {
+          "name": "fonts_value",
+          "type": "Amath::Model::FontsValue"
+        },
+        {
+          "name": "hex_number",
+          "type": "string"
+        },
+        {
+          "name": "intermediate_exp",
+          "type": "Amath::Model::IntermediateExp"
+        },
+        {
+          "name": "number",
+          "type": "string"
+        },
+        {
+          "name": "octal_number",
+          "type": "string"
+        },
+        {
+          "name": "power",
+          "type": "Amath::Model::Power"
+        },
+        {
+          "name": "power_base",
+          "type": "Amath::Model::PowerBase"
+        },
+        {
+          "name": "power_value",
+          "type": "Amath::Model::PowerValue"
+        },
+        {
+          "name": "slash",
+          "type": "string"
+        },
+        {
+          "name": "symbol",
+          "type": "Amath::Model::MathSymbol"
+        },
+        {
+          "name": "ternary_class",
+          "type": "string"
+        },
+        {
+          "name": "text",
+          "type": "Amath::Model::Text"
+        },
+        {
+          "name": "unary",
+          "type": "Amath::Model::Unary"
+        },
+        {
+          "name": "unary_class",
+          "type": "string"
+        },
+        {
+          "name": "uncertainty",
+          "type": "Amath::Model::Uncertainty"
+        },
+        {
+          "name": "unitsml",
+          "type": "Amath::Model::Unitsml"
+        }
+      ],
+      "mappings": {}
+    },
+    {
+      "lml": 1,
+      "model": "Amath::Model::Uncertainty",
+      "attributes": [
+        {
+          "name": "concise_digits",
+          "type": "string"
+        },
+        {
+          "name": "coverage_factor",
+          "type": "string"
+        },
+        {
+          "name": "coverage_probability",
+          "type": "string"
+        },
+        {
+          "name": "distribution",
+          "type": "string"
+        },
+        {
+          "name": "interval_kind",
+          "type": "string"
+        },
+        {
+          "name": "lower",
+          "type": "string"
+        },
+        {
+          "name": "magnitude",
+          "type": "string"
+        },
+        {
+          "name": "plus_minus",
+          "type": "string"
+        },
+        {
+          "name": "relative_magnitude",
+          "type": "string"
+        },
+        {
+          "name": "shared_exponent",
+          "type": "string"
+        },
+        {
+          "name": "uncertainty_class",
+          "type": "string"
+        },
+        {
+          "name": "unit",
+          "type": "Amath::Model::Unit"
+        },
+        {
+          "name": "upper",
+          "type": "string"
+        },
+        {
+          "name": "value",
+          "type": "string"
+        }
+      ],
+      "mappings": {}
+    },
+    {
+      "lml": 1,
+      "model": "Amath::Model::Unit",
+      "attributes": [
+        {
+          "name": "empty_list",
+          "type": "string"
+        },
+        {
+          "name": "literal",
+          "type": "string"
+        },
+        {
+          "name": "quantity",
+          "type": "string"
+        }
+      ],
+      "mappings": {}
+    },
+    {
+      "lml": 1,
+      "model": "Amath::Model::Unitsml",
+      "attributes": [
+        {
+          "name": "empty_list",
+          "type": "string"
+        },
+        {
+          "name": "literal",
+          "type": "string"
+        }
+      ],
+      "mappings": {}
+    }
+  ]
+}

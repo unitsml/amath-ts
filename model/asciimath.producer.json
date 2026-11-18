@@ -1,0 +1,11 @@
+{
+  "repository": "https://github.com/plurimath/amath",
+  "commit": "cb214633c0dc415a4e1bf0a96c06db36600cbf9d",
+  "exporter": "scripts/export_portable_models.rb",
+  "exporterSha256": "adba8b8aa4ec6a027c44a42a84c0c781e58cfb9e042bfee154ee7f6ba8978c14",
+  "frameworkRepository": "https://github.com/lutaml/lutaml-model",
+  "frameworkCommit": "fd2989fd8478b1ecb2508d98fa2d66792c09c72b",
+  "bundleSha256": "ba5d1c17c71fedc220f54cac07836f3a8c6667eb9c6dce8b2b7fc32947dbfe7b",
+  "comparisonProfile": "portable-exact-json-v1",
+  "resolvedRubySymbolsProbe": "pinned original/new symbol read/write outputs equal"
+}

@@ -8,18 +8,43 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "test": "node --test test/"
+    "check:artifacts": "node scripts/verify-artifacts.mjs",
+    "test": "node --test test/*.test.mjs",
+    "prepare": "npm run build"
   },
   "dependencies": {
-    "parsanol": "^0.10.13"
+    "parsanol": "git+https://github.com/suleman-uzair/parsanol-ts.git#4c61875d96937ed228d5344de70beb7999388e2e"
   },
   "devDependencies": {
-    "@types/node": "^22.0.0",
-    "typescript": "^5.5.0"
+    "@types/node": "22.20.5",
+    "typescript": "6.0.3",
+    "yaml": "2.9.1"
   },
   "license": "BSD-2-Clause",
   "repository": {
     "type": "git",
     "url": "https://github.com/unitsml/amath-ts"
+  },
+  "files": [
+    "dist/",
+    "artifacts/",
+    "grammars/",
+    "model/",
+    "LICENSE.md",
+    "data/"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./browser": {
+      "types": "./dist/browser.d.ts",
+      "import": "./dist/browser.js"
+    },
+    "./artifacts/*": "./artifacts/*"
   }
 }
