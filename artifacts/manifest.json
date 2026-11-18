@@ -1,22 +1,20 @@
 {
   "repository": "https://github.com/plurimath/amath",
-  "commit": "3cbf3f8d0c789dff0542ad8b412d088659423d06",
+  "commit": "675d759322dd13002317a79b1ce12c935b01910a",
   "files": {
-    "artifacts/asciimath.json": "f7e812476e125729e4f69c00d08083d69e83b4666d3c33b911e3ab88d30988da",
-    "artifacts/asciimath.bindings.ts.json": "1865cd1507bc519987b65eaba4b54b934fcfea3856555a3c6a646b0f07ceb62f",
-    "artifacts/asciimath.checksums.txt": "867e257a85b013f355b3201667402902f97a93bf20c6c76bece9c6c1c0cee28c",
-    "grammars/asciimath.parg": "8fc391577745dec67f31913a54de1060c6856f5514ed3c11300724a462ae8cfb",
+    "artifacts/asciimath.json": "dcb76184896f81760293483f7d2e7096ac9a6d7243de67c6f33aeb8efdee296e",
+    "artifacts/asciimath.bindings.ts.json": "bc27896a59a9a9dc4df02ab7cd1af35f9dbc24649141098f6da82eb7a0401586",
+    "artifacts/asciimath.checksums.txt": "9297028c8dc63a6aa75eb010ef332fe16a56e236512d0ccb6143d65c9cb0ad2d",
+    "grammars/asciimath.parg": "08cea18f49353c14f349ea67c91d748dd449538549654ab1be060f33269769ed",
     "grammars/asciimath.wrappers.json": "ef2919bef0d3581eb5bfe93dfc268cf85961fb69794b6730f792b14c0a0b6618",
     "model/asciimath.lml.json": "da333f8d082478299474767c5648e7a2b2a68a3bd86eeacd6cc087e782ea2e19",
     "data/asciimath-symbols.json": "828202076ad10a1763499c84b3dba68083834cc91298538a49c7a006ae39d9c5"
   },
   "parsanol": {
     "package": "parsanol",
-    "version": "0.10.44",
-    "source_commit": "42aeb8fb4773b7e11d0e52bdf5c7e4b34bf5efa4",
-    "repository": "https://github.com/suleman-uzair/parsanol-ts",
-    "status": "public Git candidate, PR61; not an npm release",
-    "engine_source_commit": "4b8351aae8e403e73aaa306111250ebd56c12e0f",
+    "version": "1.5.7",
+    "repository": "https://github.com/parsanol/parsanol-ts",
+    "status": "npm release",
     "diagnostics": "strict primary shape; Parslet causal refusal; strict deepest fallback"
   },
   "model_codegen": {
