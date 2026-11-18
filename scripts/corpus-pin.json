@@ -1,0 +1,21 @@
+{
+  "repository": "https://github.com/plurimath/plurimath-testsuite",
+  "revision": "674126a07fa1cf89c24bc50fadb305299e1d1b18",
+  "language": "asciimath",
+  "generation": 5,
+  "path": "stages/asciimath/generations/000005",
+  "snapshot_digest": "sha256:d3ee5a267373c235e555f2c0d01ae72e730ea2648113adcf7b0c87238b0ff63b",
+  "provenance_sha256": "242557f89ca77b75d702ca630bed0b3860cbd95ada962ec1dcebee54609defe0",
+  "boundaries": {
+    "raw-tree": {
+      "rows": 10,
+      "ids_sha256": "5553489585c9d73ecdab751f0a5b6dc1404f60d092d16c6aa458771b9f77f57a"
+    },
+    "typed-model": {
+      "rows": 10,
+      "ids_sha256": "f40eacc8ec1c2e28fe627f71fd03a07b6a580a52ee72da9f7c284f1051edc7ff"
+    }
+  },
+  "legacy_payloads_not_run": 29,
+  "api": "parseTree (raw-tree); parse typed model (typed-model)"
+}

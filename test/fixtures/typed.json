@@ -1,20 +1,20 @@
 {
   "repository": "https://github.com/plurimath/plurimath-testsuite",
-  "commit": "0d50db714d75e3883a507fbc47022eb547fb027f",
-  "generation": 3,
+  "commit": "674126a07fa1cf89c24bc50fadb305299e1d1b18",
+  "generation": 5,
   "boundary": "typed-model",
   "cases": [
     {
-      "id": "uncertainty-shared-exponent.standard.positive.model",
+      "id": "uncertainty-shared-exponent.standard.positive-r2.model",
       "input": {
-        "str": "ustd((3.85, 0.23)e4)"
+        "str": "\"ustd((3.85, 0.23)e4)\""
       },
       "options": {
         "decimal": "."
       },
       "expected": {
         "preprocessed": {
-          "str": "ustd((3.85, 0.23)e4)"
+          "str": "\"ustd((3.85, 0.23)e4)\""
         },
         "tree": {
           "node": "Amath::Model::Document",
@@ -131,16 +131,16 @@
       }
     },
     {
-      "id": "uncertainty-shared-exponent.standard.negative.model",
+      "id": "uncertainty-shared-exponent.standard.negative-r2.model",
       "input": {
-        "str": "ustd((-3.850, 0.230)e+4)"
+        "str": "\"ustd((-3.850, 0.230)e+4)\""
       },
       "options": {
         "decimal": "."
       },
       "expected": {
         "preprocessed": {
-          "str": "ustd((-3.850, 0.230)e+4)"
+          "str": "\"ustd((-3.850, 0.230)e+4)\""
         },
         "tree": {
           "node": "Amath::Model::Document",
@@ -257,16 +257,16 @@
       }
     },
     {
-      "id": "uncertainty-shared-exponent.standard.leading_zeroes.model",
+      "id": "uncertainty-shared-exponent.standard.leading_zeroes-r2.model",
       "input": {
-        "str": "ustd((001.2300, 000.0040)e-2)"
+        "str": "\"ustd((001.2300, 000.0040)e-2)\""
       },
       "options": {
         "decimal": "."
       },
       "expected": {
         "preprocessed": {
-          "str": "ustd((001.2300, 000.0040)e-2)"
+          "str": "\"ustd((001.2300, 000.0040)e-2)\""
         },
         "tree": {
           "node": "Amath::Model::Document",
@@ -383,16 +383,16 @@
       }
     },
     {
-      "id": "uncertainty-shared-exponent.standard.zero_exponent.model",
+      "id": "uncertainty-shared-exponent.standard.zero_exponent-r2.model",
       "input": {
-        "str": "ustd((1.230, 0.004)e0)"
+        "str": "\"ustd((1.230, 0.004)e0)\""
       },
       "options": {
         "decimal": "."
       },
       "expected": {
         "preprocessed": {
-          "str": "ustd((1.230, 0.004)e0)"
+          "str": "\"ustd((1.230, 0.004)e0)\""
         },
         "tree": {
           "node": "Amath::Model::Document",
@@ -509,16 +509,16 @@
       }
     },
     {
-      "id": "uncertainty-shared-exponent.concise.negative_exponent.model",
+      "id": "uncertainty-shared-exponent.concise.negative_exponent-r2.model",
       "input": {
-        "str": "ustd(680(41)e-3)"
+        "str": "\"ustd(680(41)e-3)\""
       },
       "options": {
         "decimal": "."
       },
       "expected": {
         "preprocessed": {
-          "str": "ustd(680(41)e-3)"
+          "str": "\"ustd(680(41)e-3)\""
         },
         "tree": {
           "node": "Amath::Model::Document",
@@ -635,16 +635,16 @@
       }
     },
     {
-      "id": "uncertainty-shared-exponent.concise.zero_exponent.model",
+      "id": "uncertainty-shared-exponent.concise.zero_exponent-r2.model",
       "input": {
-        "str": "ustd(1.230(4)e0)"
+        "str": "\"ustd(1.230(4)e0)\""
       },
       "options": {
         "decimal": "."
       },
       "expected": {
         "preprocessed": {
-          "str": "ustd(1.230(4)e0)"
+          "str": "\"ustd(1.230(4)e0)\""
         },
         "tree": {
           "node": "Amath::Model::Document",
@@ -761,16 +761,16 @@
       }
     },
     {
-      "id": "uncertainty-shared-exponent.concise.unit.model",
+      "id": "uncertainty-shared-exponent.concise.unit-r2.model",
       "input": {
-        "str": "ustd(680(41)e-3, \"unitsml(kg)\")"
+        "str": "\"ustd(680(41)e-3, \"unitsml(kg)\")\""
       },
       "options": {
         "decimal": "."
       },
       "expected": {
         "preprocessed": {
-          "str": "ustd(680(41)e-3, \"unitsml(kg)\")"
+          "str": "\"ustd(680(41)e-3, \"unitsml(kg)\")\""
         },
         "tree": {
           "node": "Amath::Model::Document",
@@ -901,16 +901,16 @@
       }
     },
     {
-      "id": "uncertainty-shared-exponent.expanded.dimensionless_fields.model",
+      "id": "uncertainty-shared-exponent.expanded.dimensionless_fields-r2.model",
       "input": {
-        "str": "uexp((3.85, 0.23)e4, 2.00, 0.950, \"unitsml(m)\")"
+        "str": "\"uexp((3.85, 0.23)e4, 2.00, 0.950, \"unitsml(m)\")\""
       },
       "options": {
         "decimal": "."
       },
       "expected": {
         "preprocessed": {
-          "str": "uexp((3.85, 0.23)e4, 2.00, 0.950, \"unitsml(m)\")"
+          "str": "\"uexp((3.85, 0.23)e4, 2.00, 0.950, \"unitsml(m)\")\""
         },
         "tree": {
           "node": "Amath::Model::Document",
@@ -1053,16 +1053,16 @@
       }
     },
     {
-      "id": "uncertainty-shared-exponent.expanded.negative_exponent.model",
+      "id": "uncertainty-shared-exponent.expanded.negative_exponent-r2.model",
       "input": {
-        "str": "uexp((100.02147, 0.00079)e-2, 2)"
+        "str": "\"uexp((100.02147, 0.00079)e-2, 2)\""
       },
       "options": {
         "decimal": "."
       },
       "expected": {
         "preprocessed": {
-          "str": "uexp((100.02147, 0.00079)e-2, 2)"
+          "str": "\"uexp((100.02147, 0.00079)e-2, 2)\""
         },
         "tree": {
           "node": "Amath::Model::Document",
@@ -1185,16 +1185,16 @@
       }
     },
     {
-      "id": "uncertainty-shared-exponent.interval.shared_exponent.model",
+      "id": "uncertainty-shared-exponent.interval.shared_exponent-r2.model",
       "input": {
-        "str": "ucov((1.024, 0.983, 1.088)e-3, 0.95, shortest, \"unitsml(V)\")"
+        "str": "\"ucov((1.024, 0.983, 1.088)e-3, 0.95, shortest, \"unitsml(V)\")\""
       },
       "options": {
         "decimal": "."
       },
       "expected": {
         "preprocessed": {
-          "str": "ucov((1.024, 0.983, 1.088)e-3, 0.95, shortest, \"unitsml(V)\")"
+          "str": "\"ucov((1.024, 0.983, 1.088)e-3, 0.95, shortest, \"unitsml(V)\")\""
         },
         "tree": {
           "node": "Amath::Model::Document",

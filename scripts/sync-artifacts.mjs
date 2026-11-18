@@ -5,12 +5,13 @@ import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 const root = fileURLToPath(new URL('../', import.meta.url));
 const source = resolve(process.argv[2] ?? '');
-const revision = '3cbf3f8d0c789dff0542ad8b412d088659423d06';
+const revision = '675d759322dd13002317a79b1ce12c935b01910a';
 const paths = ['artifacts/asciimath.json', 'artifacts/asciimath.bindings.ts.json', 'artifacts/asciimath.checksums.txt', 'grammars/asciimath.parg', 'grammars/asciimath.wrappers.json', 'model/asciimath.lml.json', 'data/asciimath-symbols.json'];
 const manifest = JSON.parse(await readFile(join(root, 'artifacts/manifest.json'), 'utf8'));
+manifest.commit = revision;
 manifest.files = {};
 for (const path of paths) {
-  const bytes = execFileSync('git', ['-C', source, 'show', `${revision}:${path}`]);
+  const bytes = execFileSync('git', ['-C', source, 'show', `${revision}:${path}`], { maxBuffer: 64 * 1024 * 1024 });
   await mkdir(dirname(join(root, path)), { recursive: true });
   await writeFile(join(root, path), bytes);
   manifest.files[path] = createHash('sha256').update(bytes).digest('hex');

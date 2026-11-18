@@ -29,6 +29,15 @@ full diagnostic corpus qualification remains separate.
 
 Run `npm ci`, `npm run build`, and `npm test`. CI checks 160 legacy trees,
 10 offset-aware rows and 10 typed-model rows on Node 22/24 across three OSes.
+
+CI also replays plurimath-testsuite asciimath generation 5, the generation the
+Ruby amath gem replays, at the commit pinned in `scripts/corpus-pin.json`.
+`npm run test:corpus -- <testsuite checkout>` checks the generation's snapshot
+digest, provenance and payload checksums, then runs every raw-tree and
+typed-model row through the packed package and compares the result with the
+row's expected value. Rows replaced by an `-r2` sibling are skipped, as in
+the Ruby replay. The legacy-oracle payloads hold Plurimath end-to-end output,
+not an amath boundary, so they are counted and not run.
 The package remains private; publication is a separate decision.
 
-Refusal positions follow Ruby Amath's policy: strict parsing supplies successful shapes; only a refusal triggers the engine's Parslet-compatible causal diagnostic selector. If that diagnostic reparse accepts or has an untyped failure, the original strict engine's deepest failure is used. Typed SDK `CallDepthLimitExceeded`, `RecursionLimitExceeded` and `ShapeDepthLimitExceeded` errors propagate unchanged before any syntax fallback, preserving their `category`, `depth` and `maxDepth` metadata. Generic WebAssembly traps also retain their identity and are never retried as syntax diagnostics. This is one WASM engine with an explicit reporter policy. It does not invoke a legacy parser or switch successful binding shapes. The public Git-pinned Parsanol candidate includes the required API and vendored engine source pin; it is not an npm release. Browser factories must supply `parseShapeWithCompatibility` too.
+Refusal positions follow Ruby Amath's policy: strict parsing supplies successful shapes; only a refusal triggers the engine's Parslet-compatible causal diagnostic selector. If that diagnostic reparse accepts or has an untyped failure, the original strict engine's deepest failure is used. Typed SDK `CallDepthLimitExceeded`, `RecursionLimitExceeded` and `ShapeDepthLimitExceeded` errors propagate unchanged before any syntax fallback, preserving their `category`, `depth` and `maxDepth` metadata. Generic WebAssembly traps also retain their identity and are never retried as syntax diagnostics. This is one WASM engine with an explicit reporter policy. It does not invoke a legacy parser or switch successful binding shapes. The runtime is the published `parsanol` npm package, pinned to an exact version. Browser factories must supply `parseShapeWithCompatibility` too.
