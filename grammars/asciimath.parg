@@ -152,9 +152,18 @@ grammar Asciimath version "0.1.0" {
   color_value__comma = (((color_left_parenthesis) as spelling) as lparen ((expression_nonempty__comma) as rgb_color / ("" as literal) as rgb_color) ([(color_right_parenthesis) as spelling]) as rparen) as intermediate_exp / iteration__comma
   color_value__arabic = (((color_left_parenthesis) as spelling) as lparen ((expression_nonempty__arabic) as rgb_color / ("" as literal) as rgb_color) ([(color_right_parenthesis) as spelling]) as rparen) as intermediate_exp / iteration__arabic
 
-  sequence__dot = (((lparen) as spelling) as lparen space_opt ((expression_nonempty__dot) as expr / ("" as literal) as expr) space_opt ([(rparen) as spelling]) as rparen) as intermediate_exp / ("text" text_body [rparen]) as intermediate_exp / symbol_text_or_integer__dot
-  sequence__comma = (((lparen) as spelling) as lparen space_opt ((expression_nonempty__comma) as expr / ("" as literal) as expr) space_opt ([(rparen) as spelling]) as rparen) as intermediate_exp / ("text" text_body [rparen]) as intermediate_exp / symbol_text_or_integer__comma
-  sequence__arabic = (((lparen) as spelling) as lparen space_opt ((expression_nonempty__arabic) as expr / ("" as literal) as expr) space_opt ([(rparen) as spelling]) as rparen) as intermediate_exp / ("text" text_body [rparen]) as intermediate_exp / symbol_text_or_integer__arabic
+  # Depth prewarm. The WASM engine allows 1024 VM frames; one bracket level
+  # costs about 12 frames on the paren path and one unary level (sqrt x) 44,
+  # mostly in the alternatives tried before the one that matches (mod's
+  # dividend, the vocabulary trie). The first two alternatives below always
+  # fail (`!any_char any_char`) and capture nothing: they only parse the
+  # nested sequence from a shallow stack first, so the memo cache already
+  # holds it when the real alternatives reach the same position deep in the
+  # stack. Results and refusals are unchanged; nesting reaches about twice
+  # as deep (WASM: 78 -> 193 brackets, 22 -> 96 sqrt).
+  sequence__dot = &(lparen space_opt sequence__dot) !(any_char) any_char / &(("underbrace" / "overbrace" / "underline" / "cancel" / "obrace" / "ubrace" / "arctan" / "arcsin" / "arccos" / "tilde" / "floor" / "ceil" / "ddot" / "coth" / "csch" / "sech" / "sinh" / "tanh" / "cosh" / "sqrt" / "norm" / "text" / "min" / "max" / "dim" / "det" / "csc" / "cot" / "lub" / "lcm" / "glb" / "gcd" / "exp" / "cos" / "tan" / "sin" / "sec" / "abs" / "bar" / "dot" / "hat" / "vec" / "ln" / "ul") space_opt sequence__dot) !(any_char) any_char / (((lparen) as spelling) as lparen space_opt ((expression_nonempty__dot) as expr / ("" as literal) as expr) space_opt ([(rparen) as spelling]) as rparen) as intermediate_exp / ("text" text_body [rparen]) as intermediate_exp / symbol_text_or_integer__dot
+  sequence__comma = &(lparen space_opt sequence__comma) !(any_char) any_char / &(("underbrace" / "overbrace" / "underline" / "cancel" / "obrace" / "ubrace" / "arctan" / "arcsin" / "arccos" / "tilde" / "floor" / "ceil" / "ddot" / "coth" / "csch" / "sech" / "sinh" / "tanh" / "cosh" / "sqrt" / "norm" / "text" / "min" / "max" / "dim" / "det" / "csc" / "cot" / "lub" / "lcm" / "glb" / "gcd" / "exp" / "cos" / "tan" / "sin" / "sec" / "abs" / "bar" / "dot" / "hat" / "vec" / "ln" / "ul") space_opt sequence__comma) !(any_char) any_char / (((lparen) as spelling) as lparen space_opt ((expression_nonempty__comma) as expr / ("" as literal) as expr) space_opt ([(rparen) as spelling]) as rparen) as intermediate_exp / ("text" text_body [rparen]) as intermediate_exp / symbol_text_or_integer__comma
+  sequence__arabic = &(lparen space_opt sequence__arabic) !(any_char) any_char / &(("underbrace" / "overbrace" / "underline" / "cancel" / "obrace" / "ubrace" / "arctan" / "arcsin" / "arccos" / "tilde" / "floor" / "ceil" / "ddot" / "coth" / "csch" / "sech" / "sinh" / "tanh" / "cosh" / "sqrt" / "norm" / "text" / "min" / "max" / "dim" / "det" / "csc" / "cot" / "lub" / "lcm" / "glb" / "gcd" / "exp" / "cos" / "tan" / "sin" / "sec" / "abs" / "bar" / "dot" / "hat" / "vec" / "ln" / "ul") space_opt sequence__arabic) !(any_char) any_char / (((lparen) as spelling) as lparen space_opt ((expression_nonempty__arabic) as expr / ("" as literal) as expr) space_opt ([(rparen) as spelling]) as rparen) as intermediate_exp / ("text" text_body [rparen]) as intermediate_exp / symbol_text_or_integer__arabic
 
   frac__dot = ((sequence__dot) as numerator space_opt frac_slash space_opt (iteration__dot) as denominator) as frac / ((power_base_rules__dot / power_base__dot) as numerator space_opt frac_slash space_opt (iteration__dot) as denominator) as frac
   frac__comma = ((sequence__comma) as numerator space_opt frac_slash space_opt (iteration__comma) as denominator) as frac / ((power_base_rules__comma / power_base__comma) as numerator space_opt frac_slash space_opt (iteration__comma) as denominator) as frac
@@ -203,9 +212,10 @@ grammar Asciimath version "0.1.0" {
   # sequence results. The chain needs at least one part, so its node is a
   # Hash wherever the oracle's result is one; with no part, alternative 1
   # can only be left_right_closed.
-  expression_nonempty__dot = expression_chain__dot / (left_right_closed__dot) as left_right
-  expression_nonempty__comma = expression_chain__comma / (left_right_closed__comma) as left_right
-  expression_nonempty__arabic = expression_chain__arabic / (left_right_closed__arabic) as left_right
+  # The first alternative is a depth prewarm (see sequence).
+  expression_nonempty__dot = &(sequence__dot) !any_char any_char / expression_chain__dot / (left_right_closed__dot) as left_right
+  expression_nonempty__comma = &(sequence__comma) !any_char any_char / expression_chain__comma / (left_right_closed__comma) as left_right
+  expression_nonempty__arabic = &(sequence__arabic) !any_char any_char / expression_chain__arabic / (left_right_closed__arabic) as left_right
   # The chain node sits under the key the oracle's outermost level has
   # (:left_right when the first part is left_right's, else :expr), so a
   # sequence merging this result with a sibling keeps or drops exactly the

@@ -138,8 +138,8 @@ test('typed SDK resources retain identity and metadata before diagnostic fallbac
 test('current WASM typed depth failures preserve metadata and parser reuse', () => {
   const nested = count => '('.repeat(count) + 'x' + ')'.repeat(count);
   for (const method of ['parseShape', 'parseTree', 'parseBindings', 'parse']) {
-    assert.doesNotThrow(() => parser[method](nested(64)), `${method} accepts depth64`);
-    for (const depth of [128, 256]) {
+    assert.doesNotThrow(() => parser[method](nested(96)), `${method} accepts depth96`);
+    for (const depth of [384, 512]) {
       assert.throws(() => parser[method](nested(depth)), error => error instanceof CallDepthLimitExceeded
         && error.name === 'CallDepthLimitExceeded' && error.category === 'call_depth_limit'
         && error.maxDepth === 1024 && error.depth === 1025);
