@@ -1,11 +1,11 @@
 {
   "repository": "https://github.com/plurimath/amath",
-  "commit": "675d759322dd13002317a79b1ce12c935b01910a",
+  "commit": "95923ecea9dc0f4bc16a53375316f20254f24712",
   "files": {
-    "artifacts/asciimath.json": "dcb76184896f81760293483f7d2e7096ac9a6d7243de67c6f33aeb8efdee296e",
-    "artifacts/asciimath.bindings.ts.json": "bc27896a59a9a9dc4df02ab7cd1af35f9dbc24649141098f6da82eb7a0401586",
-    "artifacts/asciimath.checksums.txt": "9297028c8dc63a6aa75eb010ef332fe16a56e236512d0ccb6143d65c9cb0ad2d",
-    "grammars/asciimath.parg": "08cea18f49353c14f349ea67c91d748dd449538549654ab1be060f33269769ed",
+    "artifacts/asciimath.json": "7be96c8c062796e88dd1f9b4b0c6cf774a74aaba14531e6f2b1883cb1a76bb80",
+    "artifacts/asciimath.bindings.ts.json": "1a848bca0847a803c3534555c562ac32878564a17bfdea3d7573a004aae80450",
+    "artifacts/asciimath.checksums.txt": "f32b408b71a54971657fbfebfd0eff8b471ef61b9180cfc4978bc3352135dd0c",
+    "grammars/asciimath.parg": "323132b8a5592f969ebd8c2ebf9494c01befa8501e478d5a877f6322f0a53549",
     "grammars/asciimath.wrappers.json": "ef2919bef0d3581eb5bfe93dfc268cf85961fb69794b6730f792b14c0a0b6618",
     "model/asciimath.lml.json": "da333f8d082478299474767c5648e7a2b2a68a3bd86eeacd6cc087e782ea2e19",
     "data/asciimath-symbols.json": "828202076ad10a1763499c84b3dba68083834cc91298538a49c7a006ae39d9c5"

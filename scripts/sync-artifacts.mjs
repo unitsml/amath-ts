@@ -5,7 +5,7 @@ import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 const root = fileURLToPath(new URL('../', import.meta.url));
 const source = resolve(process.argv[2] ?? '');
-const revision = '675d759322dd13002317a79b1ce12c935b01910a';
+const revision = '95923ecea9dc0f4bc16a53375316f20254f24712';
 const paths = ['artifacts/asciimath.json', 'artifacts/asciimath.bindings.ts.json', 'artifacts/asciimath.checksums.txt', 'grammars/asciimath.parg', 'grammars/asciimath.wrappers.json', 'model/asciimath.lml.json', 'data/asciimath-symbols.json'];
 const manifest = JSON.parse(await readFile(join(root, 'artifacts/manifest.json'), 'utf8'));
 manifest.commit = revision;
