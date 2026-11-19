@@ -212,10 +212,17 @@ grammar Asciimath version "0.1.0" {
   # sequence results. The chain needs at least one part, so its node is a
   # Hash wherever the oracle's result is one; with no part, alternative 1
   # can only be left_right_closed.
-  # The first alternative is a depth prewarm (see sequence).
-  expression_nonempty__dot = &(sequence__dot) !any_char any_char / expression_chain__dot / (left_right_closed__dot) as left_right
-  expression_nonempty__comma = &(sequence__comma) !any_char any_char / expression_chain__comma / (left_right_closed__comma) as left_right
-  expression_nonempty__arabic = &(sequence__arabic) !any_char any_char / expression_chain__arabic / (left_right_closed__arabic) as left_right
+  # The first alternative is a depth prewarm (see sequence). It walks the
+  # chain one sequence or space at a time, so a bracket nested after other
+  # terms, as in `(a+(a+...))` or `sqrt(a+sqrt(a+...))`, is parsed from a
+  # shallow stack too. Without it the
+  # real chain reaches that bracket through expression_link, iteration and
+  # mod, about 28 frames per level (WASM: 36 -> 81 for `(a+`, 30 -> 57 for
+  # `sqrt(a+`). It stops at the first other character, so it never looks
+  # further than the real chain and refusal offsets stay the same.
+  expression_nonempty__dot = &(1*(sequence__dot / space)) !any_char any_char / expression_chain__dot / (left_right_closed__dot) as left_right
+  expression_nonempty__comma = &(1*(sequence__comma / space)) !any_char any_char / expression_chain__comma / (left_right_closed__comma) as left_right
+  expression_nonempty__arabic = &(1*(sequence__arabic / space)) !any_char any_char / expression_chain__arabic / (left_right_closed__arabic) as left_right
   # The chain node sits under the key the oracle's outermost level has
   # (:left_right when the first part is left_right's, else :expr), so a
   # sequence merging this result with a sibling keeps or drops exactly the
