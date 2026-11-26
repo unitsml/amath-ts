@@ -14,9 +14,9 @@ export function decodeAmathModelAmathChainItem(v: unknown): m.AmathModelAmathCha
 
 export function encodeAmathModelAmathChainItem(x: m.AmathModelAmathChainItem): w.Rec {
   const out: Record<string, unknown> = {};
-  w.render(out, "amath_end", x.amath_end, encodeAmathModelAmathEnd, "omit", "omit", "scalar");
-  w.render(out, "amath_lr", x.amath_lr, encodeAmathModelAmathLr, "omit", "omit", "scalar");
-  w.render(out, "amath_step", x.amath_step, encodeAmathModelAmathStep, "omit", "omit", "scalar");
+  w.render(out, "amath_end", x.amath_end, encodeAmathModelAmathEnd, "omit", "omit", "hash");
+  w.render(out, "amath_lr", x.amath_lr, encodeAmathModelAmathLr, "omit", "omit", "hash");
+  w.render(out, "amath_step", x.amath_step, encodeAmathModelAmathStep, "omit", "omit", "hash");
   return out;
 }
 
@@ -36,12 +36,12 @@ export function decodeAmathModelAmathEnd(v: unknown): m.AmathModelAmathEnd {
 
 export function encodeAmathModelAmathEnd(x: m.AmathModelAmathEnd): w.Rec {
   const out: Record<string, unknown> = {};
-  w.render(out, "comma", x.comma, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
+  w.render(out, "comma", x.comma, encodeAmathModelMathSymbol, "omit", "omit", "hash");
   w.render(out, "empty", x.empty, w.eStr, "omit", "omit", "text");
-  w.render(out, "expr", x.expr, encodeAmathModelExpr, "omit", "omit", "scalar");
-  w.render(out, "left_right", x.left_right, encodeAmathModelLeftRight, "omit", "omit", "scalar");
-  w.render(out, "rparen", x.rparen, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
-  w.render(out, "table", x.table, encodeAmathModelTable, "omit", "omit", "scalar");
+  w.render(out, "expr", x.expr, encodeAmathModelExpr, "omit", "omit", "hash");
+  w.render(out, "left_right", x.left_right, encodeAmathModelLeftRight, "omit", "omit", "hash");
+  w.render(out, "rparen", x.rparen, encodeAmathModelMathSymbol, "omit", "omit", "hash");
+  w.render(out, "table", x.table, encodeAmathModelTable, "omit", "omit", "hash");
   return out;
 }
 
@@ -61,12 +61,12 @@ export function decodeAmathModelAmathLr(v: unknown): m.AmathModelAmathLr {
 
 export function encodeAmathModelAmathLr(x: m.AmathModelAmathLr): w.Rec {
   const out: Record<string, unknown> = {};
-  w.render(out, "base", x.base, encodeAmathModelBase, "omit", "omit", "scalar");
-  w.render(out, "base_value", x.base_value, encodeAmathModelBaseValue, "omit", "omit", "scalar");
-  w.render(out, "frac", x.frac, encodeAmathModelFrac, "omit", "omit", "scalar");
-  w.render(out, "power", x.power, encodeAmathModelPower, "omit", "omit", "scalar");
-  w.render(out, "power_value", x.power_value, encodeAmathModelPowerValue, "omit", "omit", "scalar");
-  w.render(out, "table", x.table, encodeAmathModelTable, "omit", "omit", "scalar");
+  w.render(out, "base", x.base, encodeAmathModelBase, "omit", "omit", "hash");
+  w.render(out, "base_value", x.base_value, encodeAmathModelBaseValue, "omit", "omit", "hash");
+  w.render(out, "frac", x.frac, encodeAmathModelFrac, "omit", "omit", "hash");
+  w.render(out, "power", x.power, encodeAmathModelPower, "omit", "omit", "hash");
+  w.render(out, "power_value", x.power_value, encodeAmathModelPowerValue, "omit", "omit", "hash");
+  w.render(out, "table", x.table, encodeAmathModelTable, "omit", "omit", "hash");
   return out;
 }
 
@@ -100,25 +100,25 @@ export function decodeAmathModelAmathStep(v: unknown): m.AmathModelAmathStep {
 
 export function encodeAmathModelAmathStep(x: m.AmathModelAmathStep): w.Rec {
   const out: Record<string, unknown> = {};
-  w.render(out, "base", x.base, encodeAmathModelBase, "omit", "omit", "scalar");
-  w.render(out, "base_value", x.base_value, encodeAmathModelBaseValue, "omit", "omit", "scalar");
-  w.render(out, "color", x.color, encodeAmathModelColor, "omit", "omit", "scalar");
-  w.render(out, "color_value", x.color_value, encodeAmathModelColorValue, "omit", "omit", "scalar");
-  w.render(out, "comma", x.comma, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
+  w.render(out, "base", x.base, encodeAmathModelBase, "omit", "omit", "hash");
+  w.render(out, "base_value", x.base_value, encodeAmathModelBaseValue, "omit", "omit", "hash");
+  w.render(out, "color", x.color, encodeAmathModelColor, "omit", "omit", "hash");
+  w.render(out, "color_value", x.color_value, encodeAmathModelColorValue, "omit", "omit", "hash");
+  w.render(out, "comma", x.comma, encodeAmathModelMathSymbol, "omit", "omit", "hash");
   w.render(out, "empty", x.empty, w.eStr, "omit", "omit", "text");
-  w.render(out, "frac", x.frac, encodeAmathModelFrac, "omit", "omit", "scalar");
-  w.render(out, "left", x.left, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
+  w.render(out, "frac", x.frac, encodeAmathModelFrac, "omit", "omit", "hash");
+  w.render(out, "left", x.left, encodeAmathModelMathSymbol, "omit", "omit", "hash");
   w.render(out, "literal", x.literal, w.eStr, "omit", "omit", "text");
   w.render(out, "literal_2", x.literal_2, w.eStr, "omit", "omit", "text");
-  w.render(out, "mod", x.mod, encodeAmathModelMod, "omit", "omit", "scalar");
-  w.render(out, "power", x.power, encodeAmathModelPower, "omit", "omit", "scalar");
-  w.render(out, "power_base", x.power_base, encodeAmathModelPowerBase, "omit", "omit", "scalar");
-  w.render(out, "power_value", x.power_value, encodeAmathModelPowerValue, "omit", "omit", "scalar");
-  w.render(out, "right", x.right, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
-  w.render(out, "sequence", x.sequence, encodeAmathModelSequence, "omit", "omit", "scalar");
-  w.render(out, "symbol", x.symbol, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
-  w.render(out, "table", x.table, encodeAmathModelTable, "omit", "omit", "scalar");
-  w.render(out, "ternary", x.ternary, encodeAmathModelTernary, "omit", "omit", "scalar");
+  w.render(out, "mod", x.mod, encodeAmathModelMod, "omit", "omit", "hash");
+  w.render(out, "power", x.power, encodeAmathModelPower, "omit", "omit", "hash");
+  w.render(out, "power_base", x.power_base, encodeAmathModelPowerBase, "omit", "omit", "hash");
+  w.render(out, "power_value", x.power_value, encodeAmathModelPowerValue, "omit", "omit", "hash");
+  w.render(out, "right", x.right, encodeAmathModelMathSymbol, "omit", "omit", "hash");
+  w.render(out, "sequence", x.sequence, encodeAmathModelSequence, "omit", "omit", "hash");
+  w.render(out, "symbol", x.symbol, encodeAmathModelMathSymbol, "omit", "omit", "hash");
+  w.render(out, "table", x.table, encodeAmathModelTable, "omit", "omit", "hash");
+  w.render(out, "ternary", x.ternary, encodeAmathModelTernary, "omit", "omit", "hash");
   w.render(out, "ternary_class", x.ternary_class, w.eStr, "omit", "omit", "text");
   return out;
 }
@@ -134,7 +134,7 @@ export function decodeAmathModelBase(v: unknown): m.AmathModelBase {
 
 export function encodeAmathModelBase(x: m.AmathModelBase): w.Rec {
   const out: Record<string, unknown> = {};
-  w.render(out, "base_value", x.base_value, encodeAmathModelBaseValue, "omit", "omit", "scalar");
+  w.render(out, "base_value", x.base_value, encodeAmathModelBaseValue, "omit", "omit", "hash");
   return out;
 }
 
@@ -170,18 +170,18 @@ export function encodeAmathModelBaseValue(x: m.AmathModelBaseValue): w.Rec {
   w.render(out, "bold_fonts", x.bold_fonts, w.eStr, "omit", "omit", "text");
   w.render(out, "comma_separated", x.comma_separated, w.eList(encodeAmathModelCommaSeparatedItem), "omit", "omit", "list");
   w.render(out, "fonts_class", x.fonts_class, w.eStr, "omit", "omit", "text");
-  w.render(out, "fonts_value", x.fonts_value, encodeAmathModelFontsValue, "omit", "omit", "scalar");
+  w.render(out, "fonts_value", x.fonts_value, encodeAmathModelFontsValue, "omit", "omit", "hash");
   w.render(out, "hex_number", x.hex_number, w.eStr, "omit", "omit", "text");
-  w.render(out, "intermediate_exp", x.intermediate_exp, encodeAmathModelIntermediateExp, "omit", "omit", "scalar");
+  w.render(out, "intermediate_exp", x.intermediate_exp, encodeAmathModelIntermediateExp, "omit", "omit", "hash");
   w.render(out, "number", x.number, w.eStr, "omit", "omit", "text");
   w.render(out, "octal_number", x.octal_number, w.eStr, "omit", "omit", "text");
   w.render(out, "slash", x.slash, w.eStr, "omit", "omit", "text");
-  w.render(out, "symbol", x.symbol, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
+  w.render(out, "symbol", x.symbol, encodeAmathModelMathSymbol, "omit", "omit", "hash");
   w.render(out, "ternary_class", x.ternary_class, w.eStr, "omit", "omit", "text");
-  w.render(out, "text", x.text, encodeAmathModelText, "omit", "omit", "scalar");
-  w.render(out, "unary", x.unary, encodeAmathModelUnary, "omit", "omit", "scalar");
-  w.render(out, "uncertainty", x.uncertainty, encodeAmathModelUncertainty, "omit", "omit", "scalar");
-  w.render(out, "unitsml", x.unitsml, encodeAmathModelUnitsml, "omit", "omit", "scalar");
+  w.render(out, "text", x.text, encodeAmathModelText, "omit", "omit", "hash");
+  w.render(out, "unary", x.unary, encodeAmathModelUnary, "omit", "omit", "hash");
+  w.render(out, "uncertainty", x.uncertainty, encodeAmathModelUncertainty, "omit", "omit", "hash");
+  w.render(out, "unitsml", x.unitsml, encodeAmathModelUnitsml, "omit", "omit", "hash");
   return out;
 }
 
@@ -214,24 +214,24 @@ export function decodeAmathModelColor(v: unknown): m.AmathModelColor {
 
 export function encodeAmathModelColor(x: m.AmathModelColor): w.Rec {
   const out: Record<string, unknown> = {};
-  w.render(out, "base", x.base, encodeAmathModelBase, "omit", "omit", "scalar");
-  w.render(out, "base_value", x.base_value, encodeAmathModelBaseValue, "omit", "omit", "scalar");
-  w.render(out, "color", x.color, encodeAmathModelColor, "omit", "omit", "scalar");
-  w.render(out, "color_value", x.color_value, encodeAmathModelColorValue, "omit", "omit", "scalar");
-  w.render(out, "comma", x.comma, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
-  w.render(out, "frac", x.frac, encodeAmathModelFrac, "omit", "omit", "scalar");
-  w.render(out, "intermediate_exp", x.intermediate_exp, encodeAmathModelIntermediateExp, "omit", "omit", "scalar");
-  w.render(out, "left", x.left, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
+  w.render(out, "base", x.base, encodeAmathModelBase, "omit", "omit", "hash");
+  w.render(out, "base_value", x.base_value, encodeAmathModelBaseValue, "omit", "omit", "hash");
+  w.render(out, "color", x.color, encodeAmathModelColor, "omit", "omit", "hash");
+  w.render(out, "color_value", x.color_value, encodeAmathModelColorValue, "omit", "omit", "hash");
+  w.render(out, "comma", x.comma, encodeAmathModelMathSymbol, "omit", "omit", "hash");
+  w.render(out, "frac", x.frac, encodeAmathModelFrac, "omit", "omit", "hash");
+  w.render(out, "intermediate_exp", x.intermediate_exp, encodeAmathModelIntermediateExp, "omit", "omit", "hash");
+  w.render(out, "left", x.left, encodeAmathModelMathSymbol, "omit", "omit", "hash");
   w.render(out, "literal", x.literal, w.eStr, "omit", "omit", "text");
-  w.render(out, "mod", x.mod, encodeAmathModelMod, "omit", "omit", "scalar");
-  w.render(out, "power", x.power, encodeAmathModelPower, "omit", "omit", "scalar");
-  w.render(out, "power_base", x.power_base, encodeAmathModelPowerBase, "omit", "omit", "scalar");
-  w.render(out, "power_value", x.power_value, encodeAmathModelPowerValue, "omit", "omit", "scalar");
-  w.render(out, "right", x.right, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
-  w.render(out, "sequence", x.sequence, encodeAmathModelSequence, "omit", "omit", "scalar");
-  w.render(out, "symbol", x.symbol, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
-  w.render(out, "table", x.table, encodeAmathModelTable, "omit", "omit", "scalar");
-  w.render(out, "ternary", x.ternary, encodeAmathModelTernary, "omit", "omit", "scalar");
+  w.render(out, "mod", x.mod, encodeAmathModelMod, "omit", "omit", "hash");
+  w.render(out, "power", x.power, encodeAmathModelPower, "omit", "omit", "hash");
+  w.render(out, "power_base", x.power_base, encodeAmathModelPowerBase, "omit", "omit", "hash");
+  w.render(out, "power_value", x.power_value, encodeAmathModelPowerValue, "omit", "omit", "hash");
+  w.render(out, "right", x.right, encodeAmathModelMathSymbol, "omit", "omit", "hash");
+  w.render(out, "sequence", x.sequence, encodeAmathModelSequence, "omit", "omit", "hash");
+  w.render(out, "symbol", x.symbol, encodeAmathModelMathSymbol, "omit", "omit", "hash");
+  w.render(out, "table", x.table, encodeAmathModelTable, "omit", "omit", "hash");
+  w.render(out, "ternary", x.ternary, encodeAmathModelTernary, "omit", "omit", "hash");
   w.render(out, "ternary_class", x.ternary_class, w.eStr, "omit", "omit", "text");
   return out;
 }
@@ -268,18 +268,18 @@ export function encodeAmathModelColorValue(x: m.AmathModelColorValue): w.Rec {
   w.render(out, "bold_fonts", x.bold_fonts, w.eStr, "omit", "omit", "text");
   w.render(out, "comma_separated", x.comma_separated, w.eList(encodeAmathModelCommaSeparatedItem), "omit", "omit", "list");
   w.render(out, "fonts_class", x.fonts_class, w.eStr, "omit", "omit", "text");
-  w.render(out, "fonts_value", x.fonts_value, encodeAmathModelFontsValue, "omit", "omit", "scalar");
+  w.render(out, "fonts_value", x.fonts_value, encodeAmathModelFontsValue, "omit", "omit", "hash");
   w.render(out, "hex_number", x.hex_number, w.eStr, "omit", "omit", "text");
-  w.render(out, "intermediate_exp", x.intermediate_exp, encodeAmathModelIntermediateExp, "omit", "omit", "scalar");
+  w.render(out, "intermediate_exp", x.intermediate_exp, encodeAmathModelIntermediateExp, "omit", "omit", "hash");
   w.render(out, "number", x.number, w.eStr, "omit", "omit", "text");
   w.render(out, "octal_number", x.octal_number, w.eStr, "omit", "omit", "text");
   w.render(out, "slash", x.slash, w.eStr, "omit", "omit", "text");
-  w.render(out, "symbol", x.symbol, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
+  w.render(out, "symbol", x.symbol, encodeAmathModelMathSymbol, "omit", "omit", "hash");
   w.render(out, "ternary_class", x.ternary_class, w.eStr, "omit", "omit", "text");
-  w.render(out, "text", x.text, encodeAmathModelText, "omit", "omit", "scalar");
-  w.render(out, "unary", x.unary, encodeAmathModelUnary, "omit", "omit", "scalar");
-  w.render(out, "uncertainty", x.uncertainty, encodeAmathModelUncertainty, "omit", "omit", "scalar");
-  w.render(out, "unitsml", x.unitsml, encodeAmathModelUnitsml, "omit", "omit", "scalar");
+  w.render(out, "text", x.text, encodeAmathModelText, "omit", "omit", "hash");
+  w.render(out, "unary", x.unary, encodeAmathModelUnary, "omit", "omit", "hash");
+  w.render(out, "uncertainty", x.uncertainty, encodeAmathModelUncertainty, "omit", "omit", "hash");
+  w.render(out, "unitsml", x.unitsml, encodeAmathModelUnitsml, "omit", "omit", "hash");
   return out;
 }
 
@@ -295,7 +295,7 @@ export function decodeAmathModelCommaSeparatedItem(v: unknown): m.AmathModelComm
 
 export function encodeAmathModelCommaSeparatedItem(x: m.AmathModelCommaSeparatedItem): w.Rec {
   const out: Record<string, unknown> = {};
-  w.render(out, "comma", x.comma, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
+  w.render(out, "comma", x.comma, encodeAmathModelMathSymbol, "omit", "omit", "hash");
   w.render(out, "number", x.number, w.eStr, "omit", "omit", "text");
   return out;
 }
@@ -328,23 +328,23 @@ export function decodeAmathModelDenominator(v: unknown): m.AmathModelDenominator
 
 export function encodeAmathModelDenominator(x: m.AmathModelDenominator): w.Rec {
   const out: Record<string, unknown> = {};
-  w.render(out, "base", x.base, encodeAmathModelBase, "omit", "omit", "scalar");
-  w.render(out, "base_value", x.base_value, encodeAmathModelBaseValue, "omit", "omit", "scalar");
-  w.render(out, "color", x.color, encodeAmathModelColor, "omit", "omit", "scalar");
-  w.render(out, "color_value", x.color_value, encodeAmathModelColorValue, "omit", "omit", "scalar");
-  w.render(out, "comma", x.comma, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
-  w.render(out, "frac", x.frac, encodeAmathModelFrac, "omit", "omit", "scalar");
-  w.render(out, "left", x.left, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
+  w.render(out, "base", x.base, encodeAmathModelBase, "omit", "omit", "hash");
+  w.render(out, "base_value", x.base_value, encodeAmathModelBaseValue, "omit", "omit", "hash");
+  w.render(out, "color", x.color, encodeAmathModelColor, "omit", "omit", "hash");
+  w.render(out, "color_value", x.color_value, encodeAmathModelColorValue, "omit", "omit", "hash");
+  w.render(out, "comma", x.comma, encodeAmathModelMathSymbol, "omit", "omit", "hash");
+  w.render(out, "frac", x.frac, encodeAmathModelFrac, "omit", "omit", "hash");
+  w.render(out, "left", x.left, encodeAmathModelMathSymbol, "omit", "omit", "hash");
   w.render(out, "literal", x.literal, w.eStr, "omit", "omit", "text");
-  w.render(out, "mod", x.mod, encodeAmathModelMod, "omit", "omit", "scalar");
-  w.render(out, "power", x.power, encodeAmathModelPower, "omit", "omit", "scalar");
-  w.render(out, "power_base", x.power_base, encodeAmathModelPowerBase, "omit", "omit", "scalar");
-  w.render(out, "power_value", x.power_value, encodeAmathModelPowerValue, "omit", "omit", "scalar");
-  w.render(out, "right", x.right, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
-  w.render(out, "sequence", x.sequence, encodeAmathModelSequence, "omit", "omit", "scalar");
-  w.render(out, "symbol", x.symbol, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
-  w.render(out, "table", x.table, encodeAmathModelTable, "omit", "omit", "scalar");
-  w.render(out, "ternary", x.ternary, encodeAmathModelTernary, "omit", "omit", "scalar");
+  w.render(out, "mod", x.mod, encodeAmathModelMod, "omit", "omit", "hash");
+  w.render(out, "power", x.power, encodeAmathModelPower, "omit", "omit", "hash");
+  w.render(out, "power_base", x.power_base, encodeAmathModelPowerBase, "omit", "omit", "hash");
+  w.render(out, "power_value", x.power_value, encodeAmathModelPowerValue, "omit", "omit", "hash");
+  w.render(out, "right", x.right, encodeAmathModelMathSymbol, "omit", "omit", "hash");
+  w.render(out, "sequence", x.sequence, encodeAmathModelSequence, "omit", "omit", "hash");
+  w.render(out, "symbol", x.symbol, encodeAmathModelMathSymbol, "omit", "omit", "hash");
+  w.render(out, "table", x.table, encodeAmathModelTable, "omit", "omit", "hash");
+  w.render(out, "ternary", x.ternary, encodeAmathModelTernary, "omit", "omit", "hash");
   w.render(out, "ternary_class", x.ternary_class, w.eStr, "omit", "omit", "text");
   return out;
 }
@@ -360,7 +360,7 @@ export function decodeAmathModelDiff(v: unknown): m.AmathModelDiff {
 
 export function encodeAmathModelDiff(x: m.AmathModelDiff): w.Rec {
   const out: Record<string, unknown> = {};
-  w.render(out, "uncertainty", x.uncertainty, encodeAmathModelUncertainty, "omit", "omit", "scalar");
+  w.render(out, "uncertainty", x.uncertainty, encodeAmathModelUncertainty, "omit", "omit", "hash");
   return out;
 }
 
@@ -396,28 +396,28 @@ export function decodeAmathModelDividend(v: unknown): m.AmathModelDividend {
 
 export function encodeAmathModelDividend(x: m.AmathModelDividend): w.Rec {
   const out: Record<string, unknown> = {};
-  w.render(out, "base", x.base, encodeAmathModelBase, "omit", "omit", "scalar");
-  w.render(out, "base_value", x.base_value, encodeAmathModelBaseValue, "omit", "omit", "scalar");
+  w.render(out, "base", x.base, encodeAmathModelBase, "omit", "omit", "hash");
+  w.render(out, "base_value", x.base_value, encodeAmathModelBaseValue, "omit", "omit", "hash");
   w.render(out, "binary_class", x.binary_class, w.eStr, "omit", "omit", "text");
   w.render(out, "binary_number", x.binary_number, w.eStr, "omit", "omit", "text");
   w.render(out, "bold_fonts", x.bold_fonts, w.eStr, "omit", "omit", "text");
   w.render(out, "comma_separated", x.comma_separated, w.eList(encodeAmathModelCommaSeparatedItem), "omit", "omit", "list");
   w.render(out, "fonts_class", x.fonts_class, w.eStr, "omit", "omit", "text");
-  w.render(out, "fonts_value", x.fonts_value, encodeAmathModelFontsValue, "omit", "omit", "scalar");
+  w.render(out, "fonts_value", x.fonts_value, encodeAmathModelFontsValue, "omit", "omit", "hash");
   w.render(out, "hex_number", x.hex_number, w.eStr, "omit", "omit", "text");
-  w.render(out, "intermediate_exp", x.intermediate_exp, encodeAmathModelIntermediateExp, "omit", "omit", "scalar");
+  w.render(out, "intermediate_exp", x.intermediate_exp, encodeAmathModelIntermediateExp, "omit", "omit", "hash");
   w.render(out, "number", x.number, w.eStr, "omit", "omit", "text");
   w.render(out, "octal_number", x.octal_number, w.eStr, "omit", "omit", "text");
-  w.render(out, "power", x.power, encodeAmathModelPower, "omit", "omit", "scalar");
-  w.render(out, "power_base", x.power_base, encodeAmathModelPowerBase, "omit", "omit", "scalar");
-  w.render(out, "power_value", x.power_value, encodeAmathModelPowerValue, "omit", "omit", "scalar");
+  w.render(out, "power", x.power, encodeAmathModelPower, "omit", "omit", "hash");
+  w.render(out, "power_base", x.power_base, encodeAmathModelPowerBase, "omit", "omit", "hash");
+  w.render(out, "power_value", x.power_value, encodeAmathModelPowerValue, "omit", "omit", "hash");
   w.render(out, "slash", x.slash, w.eStr, "omit", "omit", "text");
-  w.render(out, "symbol", x.symbol, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
+  w.render(out, "symbol", x.symbol, encodeAmathModelMathSymbol, "omit", "omit", "hash");
   w.render(out, "ternary_class", x.ternary_class, w.eStr, "omit", "omit", "text");
-  w.render(out, "text", x.text, encodeAmathModelText, "omit", "omit", "scalar");
-  w.render(out, "unary", x.unary, encodeAmathModelUnary, "omit", "omit", "scalar");
-  w.render(out, "uncertainty", x.uncertainty, encodeAmathModelUncertainty, "omit", "omit", "scalar");
-  w.render(out, "unitsml", x.unitsml, encodeAmathModelUnitsml, "omit", "omit", "scalar");
+  w.render(out, "text", x.text, encodeAmathModelText, "omit", "omit", "hash");
+  w.render(out, "unary", x.unary, encodeAmathModelUnary, "omit", "omit", "hash");
+  w.render(out, "uncertainty", x.uncertainty, encodeAmathModelUncertainty, "omit", "omit", "hash");
+  w.render(out, "unitsml", x.unitsml, encodeAmathModelUnitsml, "omit", "omit", "hash");
   return out;
 }
 
@@ -450,24 +450,24 @@ export function decodeAmathModelDivisor(v: unknown): m.AmathModelDivisor {
 
 export function encodeAmathModelDivisor(x: m.AmathModelDivisor): w.Rec {
   const out: Record<string, unknown> = {};
-  w.render(out, "base", x.base, encodeAmathModelBase, "omit", "omit", "scalar");
-  w.render(out, "base_value", x.base_value, encodeAmathModelBaseValue, "omit", "omit", "scalar");
-  w.render(out, "color", x.color, encodeAmathModelColor, "omit", "omit", "scalar");
-  w.render(out, "color_value", x.color_value, encodeAmathModelColorValue, "omit", "omit", "scalar");
-  w.render(out, "comma", x.comma, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
-  w.render(out, "frac", x.frac, encodeAmathModelFrac, "omit", "omit", "scalar");
-  w.render(out, "left", x.left, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
+  w.render(out, "base", x.base, encodeAmathModelBase, "omit", "omit", "hash");
+  w.render(out, "base_value", x.base_value, encodeAmathModelBaseValue, "omit", "omit", "hash");
+  w.render(out, "color", x.color, encodeAmathModelColor, "omit", "omit", "hash");
+  w.render(out, "color_value", x.color_value, encodeAmathModelColorValue, "omit", "omit", "hash");
+  w.render(out, "comma", x.comma, encodeAmathModelMathSymbol, "omit", "omit", "hash");
+  w.render(out, "frac", x.frac, encodeAmathModelFrac, "omit", "omit", "hash");
+  w.render(out, "left", x.left, encodeAmathModelMathSymbol, "omit", "omit", "hash");
   w.render(out, "literal", x.literal, w.eStr, "omit", "omit", "text");
-  w.render(out, "mod", x.mod, encodeAmathModelMod, "omit", "omit", "scalar");
-  w.render(out, "negative_mod_operand", x.negative_mod_operand, encodeAmathModelNegativeModOperand, "omit", "omit", "scalar");
-  w.render(out, "power", x.power, encodeAmathModelPower, "omit", "omit", "scalar");
-  w.render(out, "power_base", x.power_base, encodeAmathModelPowerBase, "omit", "omit", "scalar");
-  w.render(out, "power_value", x.power_value, encodeAmathModelPowerValue, "omit", "omit", "scalar");
-  w.render(out, "right", x.right, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
-  w.render(out, "sequence", x.sequence, encodeAmathModelSequence, "omit", "omit", "scalar");
-  w.render(out, "symbol", x.symbol, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
-  w.render(out, "table", x.table, encodeAmathModelTable, "omit", "omit", "scalar");
-  w.render(out, "ternary", x.ternary, encodeAmathModelTernary, "omit", "omit", "scalar");
+  w.render(out, "mod", x.mod, encodeAmathModelMod, "omit", "omit", "hash");
+  w.render(out, "negative_mod_operand", x.negative_mod_operand, encodeAmathModelNegativeModOperand, "omit", "omit", "hash");
+  w.render(out, "power", x.power, encodeAmathModelPower, "omit", "omit", "hash");
+  w.render(out, "power_base", x.power_base, encodeAmathModelPowerBase, "omit", "omit", "hash");
+  w.render(out, "power_value", x.power_value, encodeAmathModelPowerValue, "omit", "omit", "hash");
+  w.render(out, "right", x.right, encodeAmathModelMathSymbol, "omit", "omit", "hash");
+  w.render(out, "sequence", x.sequence, encodeAmathModelSequence, "omit", "omit", "hash");
+  w.render(out, "symbol", x.symbol, encodeAmathModelMathSymbol, "omit", "omit", "hash");
+  w.render(out, "table", x.table, encodeAmathModelTable, "omit", "omit", "hash");
+  w.render(out, "ternary", x.ternary, encodeAmathModelTernary, "omit", "omit", "hash");
   w.render(out, "ternary_class", x.ternary_class, w.eStr, "omit", "omit", "text");
   return out;
 }
@@ -484,7 +484,7 @@ export function decodeAmathModelDocument(v: unknown): m.AmathModelDocument {
 
 export function encodeAmathModelDocument(x: m.AmathModelDocument): w.Rec {
   const out: Record<string, unknown> = {};
-  w.render(out, "expression", x.expression, encodeAmathModelExpression, "omit", "omit", "scalar");
+  w.render(out, "expression", x.expression, encodeAmathModelExpression, "omit", "omit", "hash");
   w.render(out, "decimal", x.decimal, w.eStr, "omit", "omit", "text");
   return out;
 }
@@ -526,30 +526,30 @@ export function decodeAmathModelExpr(v: unknown): m.AmathModelExpr {
 export function encodeAmathModelExpr(x: m.AmathModelExpr): w.Rec {
   const out: Record<string, unknown> = {};
   w.render(out, "amath_chain", x.amath_chain, w.eList(encodeAmathModelAmathChainItem), "omit", "omit", "list");
-  w.render(out, "base", x.base, encodeAmathModelBase, "omit", "omit", "scalar");
-  w.render(out, "base_value", x.base_value, encodeAmathModelBaseValue, "omit", "omit", "scalar");
-  w.render(out, "color", x.color, encodeAmathModelColor, "omit", "omit", "scalar");
-  w.render(out, "color_value", x.color_value, encodeAmathModelColorValue, "omit", "omit", "scalar");
-  w.render(out, "comma", x.comma, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
+  w.render(out, "base", x.base, encodeAmathModelBase, "omit", "omit", "hash");
+  w.render(out, "base_value", x.base_value, encodeAmathModelBaseValue, "omit", "omit", "hash");
+  w.render(out, "color", x.color, encodeAmathModelColor, "omit", "omit", "hash");
+  w.render(out, "color_value", x.color_value, encodeAmathModelColorValue, "omit", "omit", "hash");
+  w.render(out, "comma", x.comma, encodeAmathModelMathSymbol, "omit", "omit", "hash");
   w.render(out, "empty", x.empty, w.eStr, "omit", "omit", "text");
-  w.render(out, "expr", x.expr, encodeAmathModelExpr, "omit", "omit", "scalar");
-  w.render(out, "frac", x.frac, encodeAmathModelFrac, "omit", "omit", "scalar");
-  w.render(out, "left", x.left, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
-  w.render(out, "left_right", x.left_right, encodeAmathModelLeftRight, "omit", "omit", "scalar");
+  w.render(out, "expr", x.expr, encodeAmathModelExpr, "omit", "omit", "hash");
+  w.render(out, "frac", x.frac, encodeAmathModelFrac, "omit", "omit", "hash");
+  w.render(out, "left", x.left, encodeAmathModelMathSymbol, "omit", "omit", "hash");
+  w.render(out, "left_right", x.left_right, encodeAmathModelLeftRight, "omit", "omit", "hash");
   w.render(out, "list", x.list, w.eList(encodeAmathModelListItem), "omit", "omit", "list");
   w.render(out, "literal", x.literal, w.eStr, "omit", "omit", "text");
   w.render(out, "literal_2", x.literal_2, w.eStr, "omit", "omit", "text");
-  w.render(out, "mod", x.mod, encodeAmathModelMod, "omit", "omit", "scalar");
-  w.render(out, "power", x.power, encodeAmathModelPower, "omit", "omit", "scalar");
-  w.render(out, "power_base", x.power_base, encodeAmathModelPowerBase, "omit", "omit", "scalar");
-  w.render(out, "power_value", x.power_value, encodeAmathModelPowerValue, "omit", "omit", "scalar");
-  w.render(out, "right", x.right, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
-  w.render(out, "rparen", x.rparen, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
-  w.render(out, "sequence", x.sequence, encodeAmathModelSequence, "omit", "omit", "scalar");
-  w.render(out, "symbol", x.symbol, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
-  w.render(out, "table", x.table, encodeAmathModelTable, "omit", "omit", "scalar");
-  w.render(out, "table_row", x.table_row, encodeAmathModelTableRow, "omit", "omit", "scalar");
-  w.render(out, "ternary", x.ternary, encodeAmathModelTernary, "omit", "omit", "scalar");
+  w.render(out, "mod", x.mod, encodeAmathModelMod, "omit", "omit", "hash");
+  w.render(out, "power", x.power, encodeAmathModelPower, "omit", "omit", "hash");
+  w.render(out, "power_base", x.power_base, encodeAmathModelPowerBase, "omit", "omit", "hash");
+  w.render(out, "power_value", x.power_value, encodeAmathModelPowerValue, "omit", "omit", "hash");
+  w.render(out, "right", x.right, encodeAmathModelMathSymbol, "omit", "omit", "hash");
+  w.render(out, "rparen", x.rparen, encodeAmathModelMathSymbol, "omit", "omit", "hash");
+  w.render(out, "sequence", x.sequence, encodeAmathModelSequence, "omit", "omit", "hash");
+  w.render(out, "symbol", x.symbol, encodeAmathModelMathSymbol, "omit", "omit", "hash");
+  w.render(out, "table", x.table, encodeAmathModelTable, "omit", "omit", "hash");
+  w.render(out, "table_row", x.table_row, encodeAmathModelTableRow, "omit", "omit", "hash");
+  w.render(out, "ternary", x.ternary, encodeAmathModelTernary, "omit", "omit", "hash");
   w.render(out, "ternary_class", x.ternary_class, w.eStr, "omit", "omit", "text");
   return out;
 }
@@ -570,12 +570,12 @@ export function decodeAmathModelExpression(v: unknown): m.AmathModelExpression {
 
 export function encodeAmathModelExpression(x: m.AmathModelExpression): w.Rec {
   const out: Record<string, unknown> = {};
-  w.render(out, "comma", x.comma, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
+  w.render(out, "comma", x.comma, encodeAmathModelMathSymbol, "omit", "omit", "hash");
   w.render(out, "empty", x.empty, w.eStr, "omit", "omit", "text");
-  w.render(out, "expr", x.expr, encodeAmathModelExpr, "omit", "omit", "scalar");
-  w.render(out, "left_right", x.left_right, encodeAmathModelLeftRight, "omit", "omit", "scalar");
-  w.render(out, "rparen", x.rparen, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
-  w.render(out, "table", x.table, encodeAmathModelTable, "omit", "omit", "scalar");
+  w.render(out, "expr", x.expr, encodeAmathModelExpr, "omit", "omit", "hash");
+  w.render(out, "left_right", x.left_right, encodeAmathModelLeftRight, "omit", "omit", "hash");
+  w.render(out, "rparen", x.rparen, encodeAmathModelMathSymbol, "omit", "omit", "hash");
+  w.render(out, "table", x.table, encodeAmathModelTable, "omit", "omit", "hash");
   return out;
 }
 
@@ -611,18 +611,18 @@ export function encodeAmathModelFontsValue(x: m.AmathModelFontsValue): w.Rec {
   w.render(out, "bold_fonts", x.bold_fonts, w.eStr, "omit", "omit", "text");
   w.render(out, "comma_separated", x.comma_separated, w.eList(encodeAmathModelCommaSeparatedItem), "omit", "omit", "list");
   w.render(out, "fonts_class", x.fonts_class, w.eStr, "omit", "omit", "text");
-  w.render(out, "fonts_value", x.fonts_value, encodeAmathModelFontsValue, "omit", "omit", "scalar");
+  w.render(out, "fonts_value", x.fonts_value, encodeAmathModelFontsValue, "omit", "omit", "hash");
   w.render(out, "hex_number", x.hex_number, w.eStr, "omit", "omit", "text");
-  w.render(out, "intermediate_exp", x.intermediate_exp, encodeAmathModelIntermediateExp, "omit", "omit", "scalar");
+  w.render(out, "intermediate_exp", x.intermediate_exp, encodeAmathModelIntermediateExp, "omit", "omit", "hash");
   w.render(out, "number", x.number, w.eStr, "omit", "omit", "text");
   w.render(out, "octal_number", x.octal_number, w.eStr, "omit", "omit", "text");
   w.render(out, "slash", x.slash, w.eStr, "omit", "omit", "text");
-  w.render(out, "symbol", x.symbol, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
+  w.render(out, "symbol", x.symbol, encodeAmathModelMathSymbol, "omit", "omit", "hash");
   w.render(out, "ternary_class", x.ternary_class, w.eStr, "omit", "omit", "text");
-  w.render(out, "text", x.text, encodeAmathModelText, "omit", "omit", "scalar");
-  w.render(out, "unary", x.unary, encodeAmathModelUnary, "omit", "omit", "scalar");
-  w.render(out, "uncertainty", x.uncertainty, encodeAmathModelUncertainty, "omit", "omit", "scalar");
-  w.render(out, "unitsml", x.unitsml, encodeAmathModelUnitsml, "omit", "omit", "scalar");
+  w.render(out, "text", x.text, encodeAmathModelText, "omit", "omit", "hash");
+  w.render(out, "unary", x.unary, encodeAmathModelUnary, "omit", "omit", "hash");
+  w.render(out, "uncertainty", x.uncertainty, encodeAmathModelUncertainty, "omit", "omit", "hash");
+  w.render(out, "unitsml", x.unitsml, encodeAmathModelUnitsml, "omit", "omit", "hash");
   return out;
 }
 
@@ -638,8 +638,8 @@ export function decodeAmathModelFrac(v: unknown): m.AmathModelFrac {
 
 export function encodeAmathModelFrac(x: m.AmathModelFrac): w.Rec {
   const out: Record<string, unknown> = {};
-  w.render(out, "denominator", x.denominator, encodeAmathModelDenominator, "omit", "omit", "scalar");
-  w.render(out, "numerator", x.numerator, encodeAmathModelNumerator, "omit", "omit", "scalar");
+  w.render(out, "denominator", x.denominator, encodeAmathModelDenominator, "omit", "omit", "hash");
+  w.render(out, "numerator", x.numerator, encodeAmathModelNumerator, "omit", "omit", "hash");
   return out;
 }
 
@@ -660,13 +660,13 @@ export function decodeAmathModelIntermediateExp(v: unknown): m.AmathModelInterme
 
 export function encodeAmathModelIntermediateExp(x: m.AmathModelIntermediateExp): w.Rec {
   const out: Record<string, unknown> = {};
-  w.render(out, "d", x.d, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
-  w.render(out, "expr", x.expr, encodeAmathModelExpr, "omit", "omit", "scalar");
-  w.render(out, "lparen", x.lparen, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
-  w.render(out, "rgb_color", x.rgb_color, encodeAmathModelRgbColor, "omit", "omit", "scalar");
-  w.render(out, "rparen", x.rparen, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
-  w.render(out, "text", x.text, encodeAmathModelText, "omit", "omit", "scalar");
-  w.render(out, "x", x.x, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
+  w.render(out, "d", x.d, encodeAmathModelMathSymbol, "omit", "omit", "hash");
+  w.render(out, "expr", x.expr, encodeAmathModelExpr, "omit", "omit", "hash");
+  w.render(out, "lparen", x.lparen, encodeAmathModelMathSymbol, "omit", "omit", "hash");
+  w.render(out, "rgb_color", x.rgb_color, encodeAmathModelRgbColor, "omit", "omit", "hash");
+  w.render(out, "rparen", x.rparen, encodeAmathModelMathSymbol, "omit", "omit", "hash");
+  w.render(out, "text", x.text, encodeAmathModelText, "omit", "omit", "hash");
+  w.render(out, "x", x.x, encodeAmathModelMathSymbol, "omit", "omit", "hash");
   return out;
 }
 
@@ -696,20 +696,20 @@ export function decodeAmathModelLeftRight(v: unknown): m.AmathModelLeftRight {
 export function encodeAmathModelLeftRight(x: m.AmathModelLeftRight): w.Rec {
   const out: Record<string, unknown> = {};
   w.render(out, "amath_chain", x.amath_chain, w.eList(encodeAmathModelAmathChainItem), "omit", "omit", "list");
-  w.render(out, "base", x.base, encodeAmathModelBase, "omit", "omit", "scalar");
-  w.render(out, "base_value", x.base_value, encodeAmathModelBaseValue, "omit", "omit", "scalar");
-  w.render(out, "comma", x.comma, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
+  w.render(out, "base", x.base, encodeAmathModelBase, "omit", "omit", "hash");
+  w.render(out, "base_value", x.base_value, encodeAmathModelBaseValue, "omit", "omit", "hash");
+  w.render(out, "comma", x.comma, encodeAmathModelMathSymbol, "omit", "omit", "hash");
   w.render(out, "empty", x.empty, w.eStr, "omit", "omit", "text");
-  w.render(out, "expr", x.expr, encodeAmathModelExpr, "omit", "omit", "scalar");
-  w.render(out, "frac", x.frac, encodeAmathModelFrac, "omit", "omit", "scalar");
-  w.render(out, "left", x.left, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
-  w.render(out, "left_right", x.left_right, encodeAmathModelLeftRight, "omit", "omit", "scalar");
-  w.render(out, "left_right_value", x.left_right_value, encodeAmathModelLeftRightValue, "omit", "omit", "scalar");
-  w.render(out, "power", x.power, encodeAmathModelPower, "omit", "omit", "scalar");
-  w.render(out, "power_value", x.power_value, encodeAmathModelPowerValue, "omit", "omit", "scalar");
-  w.render(out, "right", x.right, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
-  w.render(out, "rparen", x.rparen, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
-  w.render(out, "table", x.table, encodeAmathModelTable, "omit", "omit", "scalar");
+  w.render(out, "expr", x.expr, encodeAmathModelExpr, "omit", "omit", "hash");
+  w.render(out, "frac", x.frac, encodeAmathModelFrac, "omit", "omit", "hash");
+  w.render(out, "left", x.left, encodeAmathModelMathSymbol, "omit", "omit", "hash");
+  w.render(out, "left_right", x.left_right, encodeAmathModelLeftRight, "omit", "omit", "hash");
+  w.render(out, "left_right_value", x.left_right_value, encodeAmathModelLeftRightValue, "omit", "omit", "hash");
+  w.render(out, "power", x.power, encodeAmathModelPower, "omit", "omit", "hash");
+  w.render(out, "power_value", x.power_value, encodeAmathModelPowerValue, "omit", "omit", "hash");
+  w.render(out, "right", x.right, encodeAmathModelMathSymbol, "omit", "omit", "hash");
+  w.render(out, "rparen", x.rparen, encodeAmathModelMathSymbol, "omit", "omit", "hash");
+  w.render(out, "table", x.table, encodeAmathModelTable, "omit", "omit", "hash");
   return out;
 }
 
@@ -757,40 +757,40 @@ export function decodeAmathModelLeftRightValue(v: unknown): m.AmathModelLeftRigh
 
 export function encodeAmathModelLeftRightValue(x: m.AmathModelLeftRightValue): w.Rec {
   const out: Record<string, unknown> = {};
-  w.render(out, "base", x.base, encodeAmathModelBase, "omit", "omit", "scalar");
-  w.render(out, "base_value", x.base_value, encodeAmathModelBaseValue, "omit", "omit", "scalar");
+  w.render(out, "base", x.base, encodeAmathModelBase, "omit", "omit", "hash");
+  w.render(out, "base_value", x.base_value, encodeAmathModelBaseValue, "omit", "omit", "hash");
   w.render(out, "binary_class", x.binary_class, w.eStr, "omit", "omit", "text");
   w.render(out, "binary_number", x.binary_number, w.eStr, "omit", "omit", "text");
   w.render(out, "bold_fonts", x.bold_fonts, w.eStr, "omit", "omit", "text");
-  w.render(out, "color", x.color, encodeAmathModelColor, "omit", "omit", "scalar");
-  w.render(out, "color_value", x.color_value, encodeAmathModelColorValue, "omit", "omit", "scalar");
-  w.render(out, "comma", x.comma, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
+  w.render(out, "color", x.color, encodeAmathModelColor, "omit", "omit", "hash");
+  w.render(out, "color_value", x.color_value, encodeAmathModelColorValue, "omit", "omit", "hash");
+  w.render(out, "comma", x.comma, encodeAmathModelMathSymbol, "omit", "omit", "hash");
   w.render(out, "comma_separated", x.comma_separated, w.eList(encodeAmathModelCommaSeparatedItem), "omit", "omit", "list");
   w.render(out, "empty", x.empty, w.eStr, "omit", "omit", "text");
   w.render(out, "fonts_class", x.fonts_class, w.eStr, "omit", "omit", "text");
-  w.render(out, "fonts_value", x.fonts_value, encodeAmathModelFontsValue, "omit", "omit", "scalar");
-  w.render(out, "frac", x.frac, encodeAmathModelFrac, "omit", "omit", "scalar");
+  w.render(out, "fonts_value", x.fonts_value, encodeAmathModelFontsValue, "omit", "omit", "hash");
+  w.render(out, "frac", x.frac, encodeAmathModelFrac, "omit", "omit", "hash");
   w.render(out, "hex_number", x.hex_number, w.eStr, "omit", "omit", "text");
-  w.render(out, "intermediate_exp", x.intermediate_exp, encodeAmathModelIntermediateExp, "omit", "omit", "scalar");
-  w.render(out, "left", x.left, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
+  w.render(out, "intermediate_exp", x.intermediate_exp, encodeAmathModelIntermediateExp, "omit", "omit", "hash");
+  w.render(out, "left", x.left, encodeAmathModelMathSymbol, "omit", "omit", "hash");
   w.render(out, "literal", x.literal, w.eStr, "omit", "omit", "text");
-  w.render(out, "mod", x.mod, encodeAmathModelMod, "omit", "omit", "scalar");
+  w.render(out, "mod", x.mod, encodeAmathModelMod, "omit", "omit", "hash");
   w.render(out, "number", x.number, w.eStr, "omit", "omit", "text");
   w.render(out, "octal_number", x.octal_number, w.eStr, "omit", "omit", "text");
-  w.render(out, "power", x.power, encodeAmathModelPower, "omit", "omit", "scalar");
-  w.render(out, "power_base", x.power_base, encodeAmathModelPowerBase, "omit", "omit", "scalar");
-  w.render(out, "power_value", x.power_value, encodeAmathModelPowerValue, "omit", "omit", "scalar");
-  w.render(out, "right", x.right, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
-  w.render(out, "sequence", x.sequence, encodeAmathModelSequence, "omit", "omit", "scalar");
+  w.render(out, "power", x.power, encodeAmathModelPower, "omit", "omit", "hash");
+  w.render(out, "power_base", x.power_base, encodeAmathModelPowerBase, "omit", "omit", "hash");
+  w.render(out, "power_value", x.power_value, encodeAmathModelPowerValue, "omit", "omit", "hash");
+  w.render(out, "right", x.right, encodeAmathModelMathSymbol, "omit", "omit", "hash");
+  w.render(out, "sequence", x.sequence, encodeAmathModelSequence, "omit", "omit", "hash");
   w.render(out, "slash", x.slash, w.eStr, "omit", "omit", "text");
-  w.render(out, "symbol", x.symbol, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
-  w.render(out, "table", x.table, encodeAmathModelTable, "omit", "omit", "scalar");
-  w.render(out, "ternary", x.ternary, encodeAmathModelTernary, "omit", "omit", "scalar");
+  w.render(out, "symbol", x.symbol, encodeAmathModelMathSymbol, "omit", "omit", "hash");
+  w.render(out, "table", x.table, encodeAmathModelTable, "omit", "omit", "hash");
+  w.render(out, "ternary", x.ternary, encodeAmathModelTernary, "omit", "omit", "hash");
   w.render(out, "ternary_class", x.ternary_class, w.eStr, "omit", "omit", "text");
-  w.render(out, "text", x.text, encodeAmathModelText, "omit", "omit", "scalar");
-  w.render(out, "unary", x.unary, encodeAmathModelUnary, "omit", "omit", "scalar");
-  w.render(out, "uncertainty", x.uncertainty, encodeAmathModelUncertainty, "omit", "omit", "scalar");
-  w.render(out, "unitsml", x.unitsml, encodeAmathModelUnitsml, "omit", "omit", "scalar");
+  w.render(out, "text", x.text, encodeAmathModelText, "omit", "omit", "hash");
+  w.render(out, "unary", x.unary, encodeAmathModelUnary, "omit", "omit", "hash");
+  w.render(out, "uncertainty", x.uncertainty, encodeAmathModelUncertainty, "omit", "omit", "hash");
+  w.render(out, "unitsml", x.unitsml, encodeAmathModelUnitsml, "omit", "omit", "hash");
   return out;
 }
 
@@ -812,14 +812,14 @@ export function decodeAmathModelListItem(v: unknown): m.AmathModelListItem {
 
 export function encodeAmathModelListItem(x: m.AmathModelListItem): w.Rec {
   const out: Record<string, unknown> = {};
-  w.render(out, "base", x.base, encodeAmathModelBase, "omit", "omit", "scalar");
-  w.render(out, "base_value", x.base_value, encodeAmathModelBaseValue, "omit", "omit", "scalar");
-  w.render(out, "comma", x.comma, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
-  w.render(out, "expr", x.expr, encodeAmathModelExpr, "omit", "omit", "scalar");
-  w.render(out, "left_right", x.left_right, encodeAmathModelLeftRight, "omit", "omit", "scalar");
-  w.render(out, "power", x.power, encodeAmathModelPower, "omit", "omit", "scalar");
-  w.render(out, "power_value", x.power_value, encodeAmathModelPowerValue, "omit", "omit", "scalar");
-  w.render(out, "rparen", x.rparen, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
+  w.render(out, "base", x.base, encodeAmathModelBase, "omit", "omit", "hash");
+  w.render(out, "base_value", x.base_value, encodeAmathModelBaseValue, "omit", "omit", "hash");
+  w.render(out, "comma", x.comma, encodeAmathModelMathSymbol, "omit", "omit", "hash");
+  w.render(out, "expr", x.expr, encodeAmathModelExpr, "omit", "omit", "hash");
+  w.render(out, "left_right", x.left_right, encodeAmathModelLeftRight, "omit", "omit", "hash");
+  w.render(out, "power", x.power, encodeAmathModelPower, "omit", "omit", "hash");
+  w.render(out, "power_value", x.power_value, encodeAmathModelPowerValue, "omit", "omit", "hash");
+  w.render(out, "rparen", x.rparen, encodeAmathModelMathSymbol, "omit", "omit", "hash");
   return out;
 }
 
@@ -856,10 +856,10 @@ export function decodeAmathModelMod(v: unknown): m.AmathModelMod {
 
 export function encodeAmathModelMod(x: m.AmathModelMod): w.Rec {
   const out: Record<string, unknown> = {};
-  w.render(out, "dividend", x.dividend, encodeAmathModelDividend, "omit", "omit", "scalar");
-  w.render(out, "divisor", x.divisor, encodeAmathModelDivisor, "omit", "omit", "scalar");
+  w.render(out, "dividend", x.dividend, encodeAmathModelDividend, "omit", "omit", "hash");
+  w.render(out, "divisor", x.divisor, encodeAmathModelDivisor, "omit", "omit", "hash");
   w.render(out, "literal", x.literal, w.eStr, "omit", "omit", "text");
-  w.render(out, "mod", x.mod, encodeAmathModelMod, "omit", "omit", "scalar");
+  w.render(out, "mod", x.mod, encodeAmathModelMod, "omit", "omit", "hash");
   return out;
 }
 
@@ -892,24 +892,24 @@ export function decodeAmathModelNegativeModOperand(v: unknown): m.AmathModelNega
 
 export function encodeAmathModelNegativeModOperand(x: m.AmathModelNegativeModOperand): w.Rec {
   const out: Record<string, unknown> = {};
-  w.render(out, "base", x.base, encodeAmathModelBase, "omit", "omit", "scalar");
-  w.render(out, "base_value", x.base_value, encodeAmathModelBaseValue, "omit", "omit", "scalar");
-  w.render(out, "color", x.color, encodeAmathModelColor, "omit", "omit", "scalar");
-  w.render(out, "color_value", x.color_value, encodeAmathModelColorValue, "omit", "omit", "scalar");
-  w.render(out, "comma", x.comma, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
-  w.render(out, "frac", x.frac, encodeAmathModelFrac, "omit", "omit", "scalar");
-  w.render(out, "left", x.left, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
+  w.render(out, "base", x.base, encodeAmathModelBase, "omit", "omit", "hash");
+  w.render(out, "base_value", x.base_value, encodeAmathModelBaseValue, "omit", "omit", "hash");
+  w.render(out, "color", x.color, encodeAmathModelColor, "omit", "omit", "hash");
+  w.render(out, "color_value", x.color_value, encodeAmathModelColorValue, "omit", "omit", "hash");
+  w.render(out, "comma", x.comma, encodeAmathModelMathSymbol, "omit", "omit", "hash");
+  w.render(out, "frac", x.frac, encodeAmathModelFrac, "omit", "omit", "hash");
+  w.render(out, "left", x.left, encodeAmathModelMathSymbol, "omit", "omit", "hash");
   w.render(out, "literal", x.literal, w.eStr, "omit", "omit", "text");
   w.render(out, "literal_2", x.literal_2, w.eStr, "omit", "omit", "text");
-  w.render(out, "mod", x.mod, encodeAmathModelMod, "omit", "omit", "scalar");
-  w.render(out, "power", x.power, encodeAmathModelPower, "omit", "omit", "scalar");
-  w.render(out, "power_base", x.power_base, encodeAmathModelPowerBase, "omit", "omit", "scalar");
-  w.render(out, "power_value", x.power_value, encodeAmathModelPowerValue, "omit", "omit", "scalar");
-  w.render(out, "right", x.right, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
-  w.render(out, "sequence", x.sequence, encodeAmathModelSequence, "omit", "omit", "scalar");
-  w.render(out, "symbol", x.symbol, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
-  w.render(out, "table", x.table, encodeAmathModelTable, "omit", "omit", "scalar");
-  w.render(out, "ternary", x.ternary, encodeAmathModelTernary, "omit", "omit", "scalar");
+  w.render(out, "mod", x.mod, encodeAmathModelMod, "omit", "omit", "hash");
+  w.render(out, "power", x.power, encodeAmathModelPower, "omit", "omit", "hash");
+  w.render(out, "power_base", x.power_base, encodeAmathModelPowerBase, "omit", "omit", "hash");
+  w.render(out, "power_value", x.power_value, encodeAmathModelPowerValue, "omit", "omit", "hash");
+  w.render(out, "right", x.right, encodeAmathModelMathSymbol, "omit", "omit", "hash");
+  w.render(out, "sequence", x.sequence, encodeAmathModelSequence, "omit", "omit", "hash");
+  w.render(out, "symbol", x.symbol, encodeAmathModelMathSymbol, "omit", "omit", "hash");
+  w.render(out, "table", x.table, encodeAmathModelTable, "omit", "omit", "hash");
+  w.render(out, "ternary", x.ternary, encodeAmathModelTernary, "omit", "omit", "hash");
   w.render(out, "ternary_class", x.ternary_class, w.eStr, "omit", "omit", "text");
   return out;
 }
@@ -953,35 +953,35 @@ export function decodeAmathModelNumerator(v: unknown): m.AmathModelNumerator {
 
 export function encodeAmathModelNumerator(x: m.AmathModelNumerator): w.Rec {
   const out: Record<string, unknown> = {};
-  w.render(out, "base", x.base, encodeAmathModelBase, "omit", "omit", "scalar");
-  w.render(out, "base_value", x.base_value, encodeAmathModelBaseValue, "omit", "omit", "scalar");
+  w.render(out, "base", x.base, encodeAmathModelBase, "omit", "omit", "hash");
+  w.render(out, "base_value", x.base_value, encodeAmathModelBaseValue, "omit", "omit", "hash");
   w.render(out, "binary_class", x.binary_class, w.eStr, "omit", "omit", "text");
   w.render(out, "binary_number", x.binary_number, w.eStr, "omit", "omit", "text");
   w.render(out, "bold_fonts", x.bold_fonts, w.eStr, "omit", "omit", "text");
   w.render(out, "comma_separated", x.comma_separated, w.eList(encodeAmathModelCommaSeparatedItem), "omit", "omit", "list");
-  w.render(out, "expr", x.expr, encodeAmathModelExpr, "omit", "omit", "scalar");
+  w.render(out, "expr", x.expr, encodeAmathModelExpr, "omit", "omit", "hash");
   w.render(out, "fonts_class", x.fonts_class, w.eStr, "omit", "omit", "text");
-  w.render(out, "fonts_value", x.fonts_value, encodeAmathModelFontsValue, "omit", "omit", "scalar");
+  w.render(out, "fonts_value", x.fonts_value, encodeAmathModelFontsValue, "omit", "omit", "hash");
   w.render(out, "hex_number", x.hex_number, w.eStr, "omit", "omit", "text");
-  w.render(out, "intermediate_exp", x.intermediate_exp, encodeAmathModelIntermediateExp, "omit", "omit", "scalar");
-  w.render(out, "left", x.left, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
+  w.render(out, "intermediate_exp", x.intermediate_exp, encodeAmathModelIntermediateExp, "omit", "omit", "hash");
+  w.render(out, "left", x.left, encodeAmathModelMathSymbol, "omit", "omit", "hash");
   w.render(out, "norm", x.norm, w.eStr, "omit", "omit", "text");
   w.render(out, "number", x.number, w.eStr, "omit", "omit", "text");
   w.render(out, "octal_number", x.octal_number, w.eStr, "omit", "omit", "text");
-  w.render(out, "power", x.power, encodeAmathModelPower, "omit", "omit", "scalar");
-  w.render(out, "power_base", x.power_base, encodeAmathModelPowerBase, "omit", "omit", "scalar");
-  w.render(out, "power_value", x.power_value, encodeAmathModelPowerValue, "omit", "omit", "scalar");
-  w.render(out, "right", x.right, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
+  w.render(out, "power", x.power, encodeAmathModelPower, "omit", "omit", "hash");
+  w.render(out, "power_base", x.power_base, encodeAmathModelPowerBase, "omit", "omit", "hash");
+  w.render(out, "power_value", x.power_value, encodeAmathModelPowerValue, "omit", "omit", "hash");
+  w.render(out, "right", x.right, encodeAmathModelMathSymbol, "omit", "omit", "hash");
   w.render(out, "slash", x.slash, w.eStr, "omit", "omit", "text");
-  w.render(out, "symbol", x.symbol, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
-  w.render(out, "table_left", x.table_left, encodeAmathModelTableLeft, "omit", "omit", "scalar");
-  w.render(out, "table_right", x.table_right, encodeAmathModelTableRight, "omit", "omit", "scalar");
-  w.render(out, "table_row", x.table_row, encodeAmathModelTableRow, "omit", "omit", "scalar");
+  w.render(out, "symbol", x.symbol, encodeAmathModelMathSymbol, "omit", "omit", "hash");
+  w.render(out, "table_left", x.table_left, encodeAmathModelTableLeft, "omit", "omit", "hash");
+  w.render(out, "table_right", x.table_right, encodeAmathModelTableRight, "omit", "omit", "hash");
+  w.render(out, "table_row", x.table_row, encodeAmathModelTableRow, "omit", "omit", "hash");
   w.render(out, "ternary_class", x.ternary_class, w.eStr, "omit", "omit", "text");
-  w.render(out, "text", x.text, encodeAmathModelText, "omit", "omit", "scalar");
-  w.render(out, "unary", x.unary, encodeAmathModelUnary, "omit", "omit", "scalar");
-  w.render(out, "uncertainty", x.uncertainty, encodeAmathModelUncertainty, "omit", "omit", "scalar");
-  w.render(out, "unitsml", x.unitsml, encodeAmathModelUnitsml, "omit", "omit", "scalar");
+  w.render(out, "text", x.text, encodeAmathModelText, "omit", "omit", "hash");
+  w.render(out, "unary", x.unary, encodeAmathModelUnary, "omit", "omit", "hash");
+  w.render(out, "uncertainty", x.uncertainty, encodeAmathModelUncertainty, "omit", "omit", "hash");
+  w.render(out, "unitsml", x.unitsml, encodeAmathModelUnitsml, "omit", "omit", "hash");
   return out;
 }
 
@@ -996,7 +996,7 @@ export function decodeAmathModelPmaDocument(v: unknown): m.AmathModelPmaDocument
 
 export function encodeAmathModelPmaDocument(x: m.AmathModelPmaDocument): w.Rec {
   const out: Record<string, unknown> = {};
-  w.render(out, "term", x.term, encodeAmathModelTerm, "omit", "omit", "scalar");
+  w.render(out, "term", x.term, encodeAmathModelTerm, "omit", "omit", "hash");
   return out;
 }
 
@@ -1011,7 +1011,7 @@ export function decodeAmathModelPower(v: unknown): m.AmathModelPower {
 
 export function encodeAmathModelPower(x: m.AmathModelPower): w.Rec {
   const out: Record<string, unknown> = {};
-  w.render(out, "power_value", x.power_value, encodeAmathModelPowerValue, "omit", "omit", "scalar");
+  w.render(out, "power_value", x.power_value, encodeAmathModelPowerValue, "omit", "omit", "hash");
   return out;
 }
 
@@ -1048,29 +1048,29 @@ export function decodeAmathModelPowerBase(v: unknown): m.AmathModelPowerBase {
 
 export function encodeAmathModelPowerBase(x: m.AmathModelPowerBase): w.Rec {
   const out: Record<string, unknown> = {};
-  w.render(out, "base", x.base, encodeAmathModelBase, "omit", "omit", "scalar");
-  w.render(out, "base_value", x.base_value, encodeAmathModelBaseValue, "omit", "omit", "scalar");
+  w.render(out, "base", x.base, encodeAmathModelBase, "omit", "omit", "hash");
+  w.render(out, "base_value", x.base_value, encodeAmathModelBaseValue, "omit", "omit", "hash");
   w.render(out, "binary_class", x.binary_class, w.eStr, "omit", "omit", "text");
   w.render(out, "binary_number", x.binary_number, w.eStr, "omit", "omit", "text");
   w.render(out, "bold_fonts", x.bold_fonts, w.eStr, "omit", "omit", "text");
   w.render(out, "comma_separated", x.comma_separated, w.eList(encodeAmathModelCommaSeparatedItem), "omit", "omit", "list");
   w.render(out, "fonts_class", x.fonts_class, w.eStr, "omit", "omit", "text");
-  w.render(out, "fonts_value", x.fonts_value, encodeAmathModelFontsValue, "omit", "omit", "scalar");
+  w.render(out, "fonts_value", x.fonts_value, encodeAmathModelFontsValue, "omit", "omit", "hash");
   w.render(out, "hex_number", x.hex_number, w.eStr, "omit", "omit", "text");
-  w.render(out, "intermediate_exp", x.intermediate_exp, encodeAmathModelIntermediateExp, "omit", "omit", "scalar");
+  w.render(out, "intermediate_exp", x.intermediate_exp, encodeAmathModelIntermediateExp, "omit", "omit", "hash");
   w.render(out, "number", x.number, w.eStr, "omit", "omit", "text");
   w.render(out, "octal_number", x.octal_number, w.eStr, "omit", "omit", "text");
-  w.render(out, "power", x.power, encodeAmathModelPower, "omit", "omit", "scalar");
-  w.render(out, "power_base", x.power_base, encodeAmathModelPowerBase, "omit", "omit", "scalar");
-  w.render(out, "power_value", x.power_value, encodeAmathModelPowerValue, "omit", "omit", "scalar");
+  w.render(out, "power", x.power, encodeAmathModelPower, "omit", "omit", "hash");
+  w.render(out, "power_base", x.power_base, encodeAmathModelPowerBase, "omit", "omit", "hash");
+  w.render(out, "power_value", x.power_value, encodeAmathModelPowerValue, "omit", "omit", "hash");
   w.render(out, "slash", x.slash, w.eStr, "omit", "omit", "text");
-  w.render(out, "symbol", x.symbol, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
+  w.render(out, "symbol", x.symbol, encodeAmathModelMathSymbol, "omit", "omit", "hash");
   w.render(out, "ternary_class", x.ternary_class, w.eStr, "omit", "omit", "text");
-  w.render(out, "text", x.text, encodeAmathModelText, "omit", "omit", "scalar");
-  w.render(out, "unary", x.unary, encodeAmathModelUnary, "omit", "omit", "scalar");
+  w.render(out, "text", x.text, encodeAmathModelText, "omit", "omit", "hash");
+  w.render(out, "unary", x.unary, encodeAmathModelUnary, "omit", "omit", "hash");
   w.render(out, "unary_class", x.unary_class, w.eStr, "omit", "omit", "text");
-  w.render(out, "uncertainty", x.uncertainty, encodeAmathModelUncertainty, "omit", "omit", "scalar");
-  w.render(out, "unitsml", x.unitsml, encodeAmathModelUnitsml, "omit", "omit", "scalar");
+  w.render(out, "uncertainty", x.uncertainty, encodeAmathModelUncertainty, "omit", "omit", "hash");
+  w.render(out, "unitsml", x.unitsml, encodeAmathModelUnitsml, "omit", "omit", "hash");
   return out;
 }
 
@@ -1106,18 +1106,18 @@ export function encodeAmathModelPowerValue(x: m.AmathModelPowerValue): w.Rec {
   w.render(out, "bold_fonts", x.bold_fonts, w.eStr, "omit", "omit", "text");
   w.render(out, "comma_separated", x.comma_separated, w.eList(encodeAmathModelCommaSeparatedItem), "omit", "omit", "list");
   w.render(out, "fonts_class", x.fonts_class, w.eStr, "omit", "omit", "text");
-  w.render(out, "fonts_value", x.fonts_value, encodeAmathModelFontsValue, "omit", "omit", "scalar");
+  w.render(out, "fonts_value", x.fonts_value, encodeAmathModelFontsValue, "omit", "omit", "hash");
   w.render(out, "hex_number", x.hex_number, w.eStr, "omit", "omit", "text");
-  w.render(out, "intermediate_exp", x.intermediate_exp, encodeAmathModelIntermediateExp, "omit", "omit", "scalar");
+  w.render(out, "intermediate_exp", x.intermediate_exp, encodeAmathModelIntermediateExp, "omit", "omit", "hash");
   w.render(out, "number", x.number, w.eStr, "omit", "omit", "text");
   w.render(out, "octal_number", x.octal_number, w.eStr, "omit", "omit", "text");
   w.render(out, "slash", x.slash, w.eStr, "omit", "omit", "text");
-  w.render(out, "symbol", x.symbol, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
+  w.render(out, "symbol", x.symbol, encodeAmathModelMathSymbol, "omit", "omit", "hash");
   w.render(out, "ternary_class", x.ternary_class, w.eStr, "omit", "omit", "text");
-  w.render(out, "text", x.text, encodeAmathModelText, "omit", "omit", "scalar");
-  w.render(out, "unary", x.unary, encodeAmathModelUnary, "omit", "omit", "scalar");
-  w.render(out, "uncertainty", x.uncertainty, encodeAmathModelUncertainty, "omit", "omit", "scalar");
-  w.render(out, "unitsml", x.unitsml, encodeAmathModelUnitsml, "omit", "omit", "scalar");
+  w.render(out, "text", x.text, encodeAmathModelText, "omit", "omit", "hash");
+  w.render(out, "unary", x.unary, encodeAmathModelUnary, "omit", "omit", "hash");
+  w.render(out, "uncertainty", x.uncertainty, encodeAmathModelUncertainty, "omit", "omit", "hash");
+  w.render(out, "unitsml", x.unitsml, encodeAmathModelUnitsml, "omit", "omit", "hash");
   return out;
 }
 
@@ -1134,8 +1134,8 @@ export function decodeAmathModelRgbColor(v: unknown): m.AmathModelRgbColor {
 
 export function encodeAmathModelRgbColor(x: m.AmathModelRgbColor): w.Rec {
   const out: Record<string, unknown> = {};
-  w.render(out, "expr", x.expr, encodeAmathModelExpr, "omit", "omit", "scalar");
-  w.render(out, "left_right", x.left_right, encodeAmathModelLeftRight, "omit", "omit", "scalar");
+  w.render(out, "expr", x.expr, encodeAmathModelExpr, "omit", "omit", "hash");
+  w.render(out, "left_right", x.left_right, encodeAmathModelLeftRight, "omit", "omit", "hash");
   w.render(out, "literal", x.literal, w.eStr, "omit", "omit", "text");
   return out;
 }
@@ -1172,18 +1172,18 @@ export function encodeAmathModelSequence(x: m.AmathModelSequence): w.Rec {
   w.render(out, "bold_fonts", x.bold_fonts, w.eStr, "omit", "omit", "text");
   w.render(out, "comma_separated", x.comma_separated, w.eList(encodeAmathModelCommaSeparatedItem), "omit", "omit", "list");
   w.render(out, "fonts_class", x.fonts_class, w.eStr, "omit", "omit", "text");
-  w.render(out, "fonts_value", x.fonts_value, encodeAmathModelFontsValue, "omit", "omit", "scalar");
+  w.render(out, "fonts_value", x.fonts_value, encodeAmathModelFontsValue, "omit", "omit", "hash");
   w.render(out, "hex_number", x.hex_number, w.eStr, "omit", "omit", "text");
-  w.render(out, "intermediate_exp", x.intermediate_exp, encodeAmathModelIntermediateExp, "omit", "omit", "scalar");
+  w.render(out, "intermediate_exp", x.intermediate_exp, encodeAmathModelIntermediateExp, "omit", "omit", "hash");
   w.render(out, "number", x.number, w.eStr, "omit", "omit", "text");
   w.render(out, "octal_number", x.octal_number, w.eStr, "omit", "omit", "text");
   w.render(out, "slash", x.slash, w.eStr, "omit", "omit", "text");
-  w.render(out, "symbol", x.symbol, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
+  w.render(out, "symbol", x.symbol, encodeAmathModelMathSymbol, "omit", "omit", "hash");
   w.render(out, "ternary_class", x.ternary_class, w.eStr, "omit", "omit", "text");
-  w.render(out, "text", x.text, encodeAmathModelText, "omit", "omit", "scalar");
-  w.render(out, "unary", x.unary, encodeAmathModelUnary, "omit", "omit", "scalar");
-  w.render(out, "uncertainty", x.uncertainty, encodeAmathModelUncertainty, "omit", "omit", "scalar");
-  w.render(out, "unitsml", x.unitsml, encodeAmathModelUnitsml, "omit", "omit", "scalar");
+  w.render(out, "text", x.text, encodeAmathModelText, "omit", "omit", "hash");
+  w.render(out, "unary", x.unary, encodeAmathModelUnary, "omit", "omit", "hash");
+  w.render(out, "uncertainty", x.uncertainty, encodeAmathModelUncertainty, "omit", "omit", "hash");
+  w.render(out, "unitsml", x.unitsml, encodeAmathModelUnitsml, "omit", "omit", "hash");
   return out;
 }
 
@@ -1204,13 +1204,13 @@ export function decodeAmathModelTable(v: unknown): m.AmathModelTable {
 
 export function encodeAmathModelTable(x: m.AmathModelTable): w.Rec {
   const out: Record<string, unknown> = {};
-  w.render(out, "expr", x.expr, encodeAmathModelExpr, "omit", "omit", "scalar");
-  w.render(out, "left", x.left, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
+  w.render(out, "expr", x.expr, encodeAmathModelExpr, "omit", "omit", "hash");
+  w.render(out, "left", x.left, encodeAmathModelMathSymbol, "omit", "omit", "hash");
   w.render(out, "norm", x.norm, w.eStr, "omit", "omit", "text");
-  w.render(out, "right", x.right, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
-  w.render(out, "table_left", x.table_left, encodeAmathModelTableLeft, "omit", "omit", "scalar");
-  w.render(out, "table_right", x.table_right, encodeAmathModelTableRight, "omit", "omit", "scalar");
-  w.render(out, "table_row", x.table_row, encodeAmathModelTableRow, "omit", "omit", "scalar");
+  w.render(out, "right", x.right, encodeAmathModelMathSymbol, "omit", "omit", "hash");
+  w.render(out, "table_left", x.table_left, encodeAmathModelTableLeft, "omit", "omit", "hash");
+  w.render(out, "table_right", x.table_right, encodeAmathModelTableRight, "omit", "omit", "hash");
+  w.render(out, "table_row", x.table_row, encodeAmathModelTableRow, "omit", "omit", "hash");
   return out;
 }
 
@@ -1229,7 +1229,7 @@ export function decodeAmathModelTableLeft(v: unknown): m.AmathModelTableLeft {
 export function encodeAmathModelTableLeft(x: m.AmathModelTableLeft): w.Rec {
   const out: Record<string, unknown> = {};
   w.render(out, "spelling", x.spelling, w.eStr, "omit", "omit", "text");
-  w.render(out, "table_left", x.table_left, encodeAmathModelTableLeft, "omit", "omit", "scalar");
+  w.render(out, "table_left", x.table_left, encodeAmathModelTableLeft, "omit", "omit", "hash");
   w.render(out, "value", x.value, w.eStr, "omit", "omit", "text");
   w.render(out, "kind", x.kind, w.eStr, "omit", "omit", "text");
   return out;
@@ -1250,7 +1250,7 @@ export function decodeAmathModelTableRight(v: unknown): m.AmathModelTableRight {
 export function encodeAmathModelTableRight(x: m.AmathModelTableRight): w.Rec {
   const out: Record<string, unknown> = {};
   w.render(out, "spelling", x.spelling, w.eStr, "omit", "omit", "text");
-  w.render(out, "table_right", x.table_right, encodeAmathModelTableRight, "omit", "omit", "scalar");
+  w.render(out, "table_right", x.table_right, encodeAmathModelTableRight, "omit", "omit", "hash");
   w.render(out, "value", x.value, w.eStr, "omit", "omit", "text");
   w.render(out, "kind", x.kind, w.eStr, "omit", "omit", "text");
   return out;
@@ -1269,7 +1269,7 @@ export function decodeAmathModelTableRow(v: unknown): m.AmathModelTableRow {
 export function encodeAmathModelTableRow(x: m.AmathModelTableRow): w.Rec {
   const out: Record<string, unknown> = {};
   w.render(out, "open_tr", x.open_tr, w.eStr, "omit", "omit", "text");
-  w.render(out, "tds_list", x.tds_list, encodeAmathModelTdsList, "omit", "omit", "scalar");
+  w.render(out, "tds_list", x.tds_list, encodeAmathModelTdsList, "omit", "omit", "hash");
   return out;
 }
 
@@ -1286,8 +1286,8 @@ export function decodeAmathModelTd(v: unknown): m.AmathModelTd {
 
 export function encodeAmathModelTd(x: m.AmathModelTd): w.Rec {
   const out: Record<string, unknown> = {};
-  w.render(out, "expr", x.expr, encodeAmathModelExpr, "omit", "omit", "scalar");
-  w.render(out, "left_right", x.left_right, encodeAmathModelLeftRight, "omit", "omit", "scalar");
+  w.render(out, "expr", x.expr, encodeAmathModelExpr, "omit", "omit", "hash");
+  w.render(out, "left_right", x.left_right, encodeAmathModelLeftRight, "omit", "omit", "hash");
   w.render(out, "literal", x.literal, w.eStr, "omit", "omit", "text");
   return out;
 }
@@ -1303,7 +1303,7 @@ export function decodeAmathModelTdsList(v: unknown): m.AmathModelTdsList {
 
 export function encodeAmathModelTdsList(x: m.AmathModelTdsList): w.Rec {
   const out: Record<string, unknown> = {};
-  w.render(out, "td", x.td, encodeAmathModelTd, "omit", "omit", "scalar");
+  w.render(out, "td", x.td, encodeAmathModelTd, "omit", "omit", "hash");
   return out;
 }
 
@@ -1320,9 +1320,9 @@ export function decodeAmathModelTerm(v: unknown): m.AmathModelTerm {
 
 export function encodeAmathModelTerm(x: m.AmathModelTerm): w.Rec {
   const out: Record<string, unknown> = {};
-  w.render(out, "diff", x.diff, encodeAmathModelDiff, "omit", "omit", "scalar");
-  w.render(out, "uncertainty", x.uncertainty, encodeAmathModelUncertainty, "omit", "omit", "scalar");
-  w.render(out, "unit", x.unit, encodeAmathModelUnit, "omit", "omit", "scalar");
+  w.render(out, "diff", x.diff, encodeAmathModelDiff, "omit", "omit", "hash");
+  w.render(out, "uncertainty", x.uncertainty, encodeAmathModelUncertainty, "omit", "omit", "hash");
+  w.render(out, "unit", x.unit, encodeAmathModelUnit, "omit", "omit", "hash");
   return out;
 }
 
@@ -1342,12 +1342,12 @@ export function decodeAmathModelTernary(v: unknown): m.AmathModelTernary {
 
 export function encodeAmathModelTernary(x: m.AmathModelTernary): w.Rec {
   const out: Record<string, unknown> = {};
-  w.render(out, "base", x.base, encodeAmathModelBase, "omit", "omit", "scalar");
-  w.render(out, "base_value", x.base_value, encodeAmathModelBaseValue, "omit", "omit", "scalar");
-  w.render(out, "power", x.power, encodeAmathModelPower, "omit", "omit", "scalar");
-  w.render(out, "power_value", x.power_value, encodeAmathModelPowerValue, "omit", "omit", "scalar");
+  w.render(out, "base", x.base, encodeAmathModelBase, "omit", "omit", "hash");
+  w.render(out, "base_value", x.base_value, encodeAmathModelBaseValue, "omit", "omit", "hash");
+  w.render(out, "power", x.power, encodeAmathModelPower, "omit", "omit", "hash");
+  w.render(out, "power_value", x.power_value, encodeAmathModelPowerValue, "omit", "omit", "hash");
   w.render(out, "ternary_class", x.ternary_class, w.eStr, "omit", "omit", "text");
-  w.render(out, "third_value", x.third_value, encodeAmathModelThirdValue, "omit", "omit", "scalar");
+  w.render(out, "third_value", x.third_value, encodeAmathModelThirdValue, "omit", "omit", "hash");
   return out;
 }
 
@@ -1396,23 +1396,23 @@ export function decodeAmathModelThirdValue(v: unknown): m.AmathModelThirdValue {
 
 export function encodeAmathModelThirdValue(x: m.AmathModelThirdValue): w.Rec {
   const out: Record<string, unknown> = {};
-  w.render(out, "base", x.base, encodeAmathModelBase, "omit", "omit", "scalar");
-  w.render(out, "base_value", x.base_value, encodeAmathModelBaseValue, "omit", "omit", "scalar");
-  w.render(out, "color", x.color, encodeAmathModelColor, "omit", "omit", "scalar");
-  w.render(out, "color_value", x.color_value, encodeAmathModelColorValue, "omit", "omit", "scalar");
-  w.render(out, "comma", x.comma, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
-  w.render(out, "frac", x.frac, encodeAmathModelFrac, "omit", "omit", "scalar");
-  w.render(out, "left", x.left, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
+  w.render(out, "base", x.base, encodeAmathModelBase, "omit", "omit", "hash");
+  w.render(out, "base_value", x.base_value, encodeAmathModelBaseValue, "omit", "omit", "hash");
+  w.render(out, "color", x.color, encodeAmathModelColor, "omit", "omit", "hash");
+  w.render(out, "color_value", x.color_value, encodeAmathModelColorValue, "omit", "omit", "hash");
+  w.render(out, "comma", x.comma, encodeAmathModelMathSymbol, "omit", "omit", "hash");
+  w.render(out, "frac", x.frac, encodeAmathModelFrac, "omit", "omit", "hash");
+  w.render(out, "left", x.left, encodeAmathModelMathSymbol, "omit", "omit", "hash");
   w.render(out, "literal", x.literal, w.eStr, "omit", "omit", "text");
-  w.render(out, "mod", x.mod, encodeAmathModelMod, "omit", "omit", "scalar");
-  w.render(out, "power", x.power, encodeAmathModelPower, "omit", "omit", "scalar");
-  w.render(out, "power_base", x.power_base, encodeAmathModelPowerBase, "omit", "omit", "scalar");
-  w.render(out, "power_value", x.power_value, encodeAmathModelPowerValue, "omit", "omit", "scalar");
-  w.render(out, "right", x.right, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
-  w.render(out, "sequence", x.sequence, encodeAmathModelSequence, "omit", "omit", "scalar");
-  w.render(out, "symbol", x.symbol, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
-  w.render(out, "table", x.table, encodeAmathModelTable, "omit", "omit", "scalar");
-  w.render(out, "ternary", x.ternary, encodeAmathModelTernary, "omit", "omit", "scalar");
+  w.render(out, "mod", x.mod, encodeAmathModelMod, "omit", "omit", "hash");
+  w.render(out, "power", x.power, encodeAmathModelPower, "omit", "omit", "hash");
+  w.render(out, "power_base", x.power_base, encodeAmathModelPowerBase, "omit", "omit", "hash");
+  w.render(out, "power_value", x.power_value, encodeAmathModelPowerValue, "omit", "omit", "hash");
+  w.render(out, "right", x.right, encodeAmathModelMathSymbol, "omit", "omit", "hash");
+  w.render(out, "sequence", x.sequence, encodeAmathModelSequence, "omit", "omit", "hash");
+  w.render(out, "symbol", x.symbol, encodeAmathModelMathSymbol, "omit", "omit", "hash");
+  w.render(out, "table", x.table, encodeAmathModelTable, "omit", "omit", "hash");
+  w.render(out, "ternary", x.ternary, encodeAmathModelTernary, "omit", "omit", "hash");
   w.render(out, "ternary_class", x.ternary_class, w.eStr, "omit", "omit", "text");
   return out;
 }
@@ -1450,29 +1450,29 @@ export function decodeAmathModelUnary(v: unknown): m.AmathModelUnary {
 
 export function encodeAmathModelUnary(x: m.AmathModelUnary): w.Rec {
   const out: Record<string, unknown> = {};
-  w.render(out, "base", x.base, encodeAmathModelBase, "omit", "omit", "scalar");
-  w.render(out, "base_value", x.base_value, encodeAmathModelBaseValue, "omit", "omit", "scalar");
+  w.render(out, "base", x.base, encodeAmathModelBase, "omit", "omit", "hash");
+  w.render(out, "base_value", x.base_value, encodeAmathModelBaseValue, "omit", "omit", "hash");
   w.render(out, "binary_class", x.binary_class, w.eStr, "omit", "omit", "text");
   w.render(out, "binary_number", x.binary_number, w.eStr, "omit", "omit", "text");
   w.render(out, "bold_fonts", x.bold_fonts, w.eStr, "omit", "omit", "text");
   w.render(out, "comma_separated", x.comma_separated, w.eList(encodeAmathModelCommaSeparatedItem), "omit", "omit", "list");
   w.render(out, "fonts_class", x.fonts_class, w.eStr, "omit", "omit", "text");
-  w.render(out, "fonts_value", x.fonts_value, encodeAmathModelFontsValue, "omit", "omit", "scalar");
+  w.render(out, "fonts_value", x.fonts_value, encodeAmathModelFontsValue, "omit", "omit", "hash");
   w.render(out, "hex_number", x.hex_number, w.eStr, "omit", "omit", "text");
-  w.render(out, "intermediate_exp", x.intermediate_exp, encodeAmathModelIntermediateExp, "omit", "omit", "scalar");
+  w.render(out, "intermediate_exp", x.intermediate_exp, encodeAmathModelIntermediateExp, "omit", "omit", "hash");
   w.render(out, "number", x.number, w.eStr, "omit", "omit", "text");
   w.render(out, "octal_number", x.octal_number, w.eStr, "omit", "omit", "text");
-  w.render(out, "power", x.power, encodeAmathModelPower, "omit", "omit", "scalar");
-  w.render(out, "power_base", x.power_base, encodeAmathModelPowerBase, "omit", "omit", "scalar");
-  w.render(out, "power_value", x.power_value, encodeAmathModelPowerValue, "omit", "omit", "scalar");
+  w.render(out, "power", x.power, encodeAmathModelPower, "omit", "omit", "hash");
+  w.render(out, "power_base", x.power_base, encodeAmathModelPowerBase, "omit", "omit", "hash");
+  w.render(out, "power_value", x.power_value, encodeAmathModelPowerValue, "omit", "omit", "hash");
   w.render(out, "slash", x.slash, w.eStr, "omit", "omit", "text");
-  w.render(out, "symbol", x.symbol, encodeAmathModelMathSymbol, "omit", "omit", "scalar");
+  w.render(out, "symbol", x.symbol, encodeAmathModelMathSymbol, "omit", "omit", "hash");
   w.render(out, "ternary_class", x.ternary_class, w.eStr, "omit", "omit", "text");
-  w.render(out, "text", x.text, encodeAmathModelText, "omit", "omit", "scalar");
-  w.render(out, "unary", x.unary, encodeAmathModelUnary, "omit", "omit", "scalar");
+  w.render(out, "text", x.text, encodeAmathModelText, "omit", "omit", "hash");
+  w.render(out, "unary", x.unary, encodeAmathModelUnary, "omit", "omit", "hash");
   w.render(out, "unary_class", x.unary_class, w.eStr, "omit", "omit", "text");
-  w.render(out, "uncertainty", x.uncertainty, encodeAmathModelUncertainty, "omit", "omit", "scalar");
-  w.render(out, "unitsml", x.unitsml, encodeAmathModelUnitsml, "omit", "omit", "scalar");
+  w.render(out, "uncertainty", x.uncertainty, encodeAmathModelUncertainty, "omit", "omit", "hash");
+  w.render(out, "unitsml", x.unitsml, encodeAmathModelUnitsml, "omit", "omit", "hash");
   return out;
 }
 
@@ -1511,7 +1511,7 @@ export function encodeAmathModelUncertainty(x: m.AmathModelUncertainty): w.Rec {
   w.render(out, "relative_magnitude", x.relative_magnitude, w.eStr, "omit", "omit", "text");
   w.render(out, "shared_exponent", x.shared_exponent, w.eStr, "omit", "omit", "text");
   w.render(out, "uncertainty_class", x.uncertainty_class, w.eStr, "omit", "omit", "text");
-  w.render(out, "unit", x.unit, encodeAmathModelUnit, "omit", "omit", "scalar");
+  w.render(out, "unit", x.unit, encodeAmathModelUnit, "omit", "omit", "hash");
   w.render(out, "upper", x.upper, w.eStr, "omit", "omit", "text");
   w.render(out, "value", x.value, w.eStr, "omit", "omit", "text");
   return out;

@@ -30,8 +30,8 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/checkout@v4
         with:
-          repository: lutaml/lutaml-ts
-          ref: 1242c7b6314dcadc42e3453e85c9f2fc879cd7ef
+          repository: lutaml/lutaml-model-ts
+          ref: a91e37d59b81bd2d78654e26ec55ac7b91fd8117
           path: .build/lutaml-ts-source
           persist-credentials: false
       - uses: actions/setup-node@v4

@@ -18,8 +18,8 @@
     "diagnostics": "strict primary shape; Parslet causal refusal; strict deepest fallback"
   },
   "model_codegen": {
-    "repository": "https://github.com/lutaml/lutaml-ts",
-    "commit": "1242c7b6314dcadc42e3453e85c9f2fc879cd7ef",
+    "repository": "https://github.com/lutaml/lutaml-model-ts",
+    "commit": "a91e37d59b81bd2d78654e26ec55ac7b91fd8117",
     "status": "private candidate; generated output consumed, not a published dependency"
   }
 }
