@@ -13,11 +13,9 @@
     "prepare": "npm run build",
     "test:corpus": "node scripts/replay-corpus.mjs"
   },
-  "dependencies": {
-    "parsanol": "git+https://github.com/suleman-uzair/parsanol-ts.git#af5d8cc8825f5e866dd2a52225fda7d945a1598d"
-  },
   "devDependencies": {
     "@types/node": "22.20.5",
+    "parsanol": "git+https://github.com/suleman-uzair/parsanol-ts.git#af5d8cc8825f5e866dd2a52225fda7d945a1598d",
     "typescript": "6.0.3",
     "yaml": "2.9.1"
   },
@@ -48,5 +46,7 @@
     },
     "./artifacts/*": "./artifacts/*"
   },
-  "peerDependencies": {}
+  "peerDependencies": {
+    "parsanol": "git+https://github.com/suleman-uzair/parsanol-ts.git#af5d8cc8825f5e866dd2a52225fda7d945a1598d"
+  }
 }
